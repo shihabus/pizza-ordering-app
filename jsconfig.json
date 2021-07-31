@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es6",
+    "module": "commonjs",
+    "paths": {
+      "/*": ["./*/index"]
+    }
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "build"]
+}
