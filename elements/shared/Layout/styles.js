@@ -1,5 +1,6 @@
-const { default: styled } = require("styled-components");
-import { Constants } from "Utils/stylesUtil";
+import styled from "styled-components";
+
+import { Constants, inlineStyles } from "Utils/stylesUtil";
 
 const FullPageWrapper = styled.div`
   height: 100vh;
@@ -23,4 +24,11 @@ const ContentContainer = styled.div`
   scroll-padding-bottom: 2em;
 `;
 
-export { FullPageWrapper, ContentContainer };
+const PaddedBox = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
+  ${inlineStyles}
+`;
+
+export { FullPageWrapper, ContentContainer, PaddedBox };
