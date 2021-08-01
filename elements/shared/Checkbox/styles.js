@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import Colors, { Gradients } from "elements/shared/Colors";
+import { inlineStyles } from "Utils/stylesUtil";
 
 const Label = styled.label`
   display: inline-flex;
@@ -34,6 +35,10 @@ const checkedIconStyle = css`
 `;
 
 const uncheckedIconStyle = css`
+  & > svg {
+    fill: ${Colors.lightGray} !important;
+    stroke: ${Colors.lightGray} !important;
+  }
   ${Input}:disabled ~ & {
     cursor: not-allowed;
   }
@@ -51,7 +56,7 @@ const CheckedStyle = styled.div`
   box-shadow: 0px 6px 25px rgba(245, 49, 63, 0.4);
 `;
 
-const UnCheckedIcon = styled.div`
+const UnCheckedStyle = styled.div`
   ${iconsStyle}
   ${uncheckedIconStyle};
 
@@ -60,4 +65,4 @@ const UnCheckedIcon = styled.div`
   box-shadow: inset 0px 2px 8px rgba(160, 168, 204, 0.4);
 `;
 
-export { Label, Input, CheckedStyle, UnCheckedIcon };
+export { Label, Input, CheckedStyle, UnCheckedStyle };

@@ -24,8 +24,8 @@ const CustomizationTitle = ({ pizzaInfo }) => {
   const [state] = useOrderContext();
   const total = getOrderTotalSelector(state);
   const { label = "size" } = getPizzaSizeSelector(state);
-  const { price: deductCrustPrice } = getPizzaCrustSelector(state);
-  const { price } = pizzaInfo;
+  const { price: deductCrustPrice = 0 } = getPizzaCrustSelector(state);
+  const { price = 0 } = pizzaInfo;
 
   const breadCrumb = [label, "crust", "topping"];
   return (

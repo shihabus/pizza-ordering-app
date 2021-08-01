@@ -1,5 +1,5 @@
 export const routeConstants = {
-  choosePizza: "/choose-size",
+  chooseSize: "/choose-size",
   chooseCrust: "/choose-crust",
   chooseTopping: "/choose-topping",
 };

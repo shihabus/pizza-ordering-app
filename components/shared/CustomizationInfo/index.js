@@ -9,7 +9,7 @@ export default function CustomizationInfo(props) {
   return (
     <TitleContainer>
       <Title>{title}</Title>
-      <Price>{total}</Price>
+      <Price>{total?.toFixed(2)}</Price>
       <BreadCrumb>
         {breadCrumb?.map((crumb, idx) => (
           <Crumb key={idx}>

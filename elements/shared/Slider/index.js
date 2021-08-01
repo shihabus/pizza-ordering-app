@@ -31,7 +31,7 @@ function Slider({ header, selection, changeHandler, children, ...rest }) {
             return React.cloneElement(child, {
               onClick: () => changeHandler(value),
               key: idx,
-              isSelected: selection === value,
+              isSelected: selection.includes(value),
             });
           })}
         </Slides>

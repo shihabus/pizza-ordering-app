@@ -1,4 +1,3 @@
-import React from "react";
 import PizzaRenderer from "components/shared/PizzaRenderer";
 import { getPizzaImageScaleSelector } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
