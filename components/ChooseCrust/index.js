@@ -9,6 +9,7 @@ import RenderPizzaCrust from "./RenderPizzaCrust";
 import { PositionedContainer, Title } from "./styles";
 import {
   getOrderTotalSelector,
+  getPizzaCrustSelector,
   getPizzaSizeSelector,
 } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
@@ -23,10 +24,16 @@ const CustomizationTitle = ({ pizzaInfo }) => {
   const [state] = useOrderContext();
   const total = getOrderTotalSelector(state);
   const { label = "size" } = getPizzaSizeSelector(state);
+  const { price: deductCrustPrice } = getPizzaCrustSelector(state);
   const { price } = pizzaInfo;
 
   const breadCrumb = [label, "crust", "topping"];
-  return <CustomizationInfo total={total + price} breadCrumb={breadCrumb} />;
+  return (
+    <CustomizationInfo
+      total={total + price - deductCrustPrice}
+      breadCrumb={breadCrumb}
+    />
+  );
 };
 
 export default function ChooseCrust({ crust, setCrust }) {
