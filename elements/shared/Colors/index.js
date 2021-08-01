@@ -12,4 +12,6 @@ const Gradients = {
   red: "linear-gradient(107.9deg, #F5313F 1.55%, #FFA360 94.08%)",
 };
 
-export { Colors, Gradients };
+export default Colors;
+
+export { Gradients };

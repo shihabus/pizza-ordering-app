@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "elements/shared/Colors";
+import Colors from "elements/shared/Colors";
 
 const TextBase = styled.p`
   font-family: Roboto;

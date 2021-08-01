@@ -4,7 +4,7 @@ import { Constants } from "Utils/stylesUtil";
 
 import { ButtonText } from "elements/shared/TextStyles";
 import { BaseButton } from "elements/shared/Button";
-import { Colors } from "elements/shared/Colors";
+import Colors from "elements/shared/Colors";
 
 const Nav = styled.nav`
   padding: 0 20px;
