@@ -1,0 +1,18 @@
+{
+  "small": {
+    "price": 8.0,
+    "size": "10''",
+    "scale": 1
+  },
+  "medium": {
+    "price": 10.0,
+    "size": "12''",
+    "scale": 1.05
+  },
+  "large": {
+    "price": 12.0,
+    "size": "14''",
+    "scale": 1.1
+  },
+  "sizes": ["small", "medium", "large"]
+}
