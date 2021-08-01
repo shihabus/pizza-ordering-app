@@ -1,0 +1,5 @@
+export const UPDATE_SIZE = "UPDATE_SIZE";
+
+export const UPDATE_CRUST = "UPDATE_CRUST";
+
+export const UPDATE_TOPPINGS = "UPDATE_TOPPINGS";

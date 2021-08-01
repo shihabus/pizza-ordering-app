@@ -10,7 +10,9 @@ import {
   LabelText,
 } from "./styles";
 
-function Pizza({ image, showRing, label, scale }) {
+function Pizza(props) {
+  const { image, showRing, label, scale } = props;
+
   return (
     <BlurredBorder scale={scale}>
       <Plate>
@@ -34,7 +36,7 @@ Pizza.propTypes = {
   scale: PropTypes.number,
 };
 
-Pizza.propTypes = {
+Pizza.defaultProps = {
   showRing: false,
   label: "",
   scale: 1,

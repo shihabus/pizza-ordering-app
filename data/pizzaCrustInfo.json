@@ -1,0 +1,18 @@
+{
+  "types": ["thin", "thick"],
+  "thin": {
+    "price": 2.0,
+    "showLabel": "+$ 2.00",
+    "scale": 1,
+    "label": "thin",
+    "image": "/assets/images/pizzaThinCrust.png"
+  },
+  "thick": {
+    "price": 4.0,
+    "showLabel": "+$ 4.00",
+    "scale": 1,
+    "label": "thick",
+    "image": "/assets/images/pizzaThickCrust.png"
+  },
+  "crusts": ["thin", "thick"]
+}
