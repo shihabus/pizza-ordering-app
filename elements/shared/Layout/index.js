@@ -1,12 +1,8 @@
-import { FullPageWrapper, ContentContainer, PaddedBox } from "./styles";
-
-const FullPage = (props) => <FullPageWrapper {...props} />;
+import { FullPage, ContentContainer, PaddedContainer } from "./styles";
 
 const Content = ({ showBottomBar, ...props }) => (
   <ContentContainer showBottomBar={showBottomBar} {...props} />
 );
-
-const PaddedContainer = (props) => <PaddedBox {...props} />;
 
 const Layout = {
   FullPage,

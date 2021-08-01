@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import { Constants, inlineStyles } from "Utils/stylesUtil";
 
-const FullPageWrapper = styled.div`
+import Colors from "elements/shared/Colors";
+
+const FullPage = styled.div`
   height: 100vh;
   /* mobile viewport bug fix */
   height: -webkit-fill-available;
@@ -11,6 +13,7 @@ const FullPageWrapper = styled.div`
 
 const ContentContainer = styled.div`
   position: absolute;
+  background-color: ${Colors.lightGray};
 
   top: ${Constants.APP_BAR_HEIGHT};
   bottom: ${({ showBottomBar }) =>
@@ -24,11 +27,11 @@ const ContentContainer = styled.div`
   scroll-padding-bottom: 2em;
 `;
 
-const PaddedBox = styled.div`
+const PaddedContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0px 20px;
   ${inlineStyles}
 `;
 
-export { FullPageWrapper, ContentContainer, PaddedBox };
+export { FullPage, ContentContainer, PaddedContainer };

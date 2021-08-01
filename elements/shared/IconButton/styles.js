@@ -20,7 +20,7 @@ const activeIconButtonStyle = css`
   }
 `;
 
-const IconButtonBase = styled(BaseButton)`
+const IconButton = styled(BaseButton)`
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -31,4 +31,4 @@ const IconButtonBase = styled(BaseButton)`
   ${activeIconButtonStyle}
 `;
 
-export { IconButtonBase };
+export { IconButton };

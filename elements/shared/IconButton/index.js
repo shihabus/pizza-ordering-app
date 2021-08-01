@@ -1,5 +1,3 @@
-import { IconButtonBase } from "./styles";
+import { IconButton } from "./styles";
 
-export default function IconButton(props) {
-  return <IconButtonBase {...props} />;
-}
+export default IconButton;
