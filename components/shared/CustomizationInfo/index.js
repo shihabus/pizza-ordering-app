@@ -1,9 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 import { TitleContainer, Title, Price, BreadCrumb, Crumb } from "./styles";
 
-export default function CustomizationInfo(props) {
+function CustomizationInfo(props) {
   const { title, total, breadCrumb } = props;
 
   return (
@@ -21,6 +20,8 @@ export default function CustomizationInfo(props) {
     </TitleContainer>
   );
 }
+
+export default CustomizationInfo;
 
 CustomizationInfo.propTypes = {
   title: PropTypes.string,

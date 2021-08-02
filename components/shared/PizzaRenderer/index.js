@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 import {
@@ -29,6 +28,8 @@ function Pizza(props) {
   );
 }
 
+export default Pizza;
+
 Pizza.propTypes = {
   image: PropTypes.string.isRequired,
   showRing: PropTypes.bool,
@@ -41,5 +42,3 @@ Pizza.defaultProps = {
   label: "",
   scale: 1,
 };
-
-export default Pizza;

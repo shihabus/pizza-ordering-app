@@ -1,10 +1,10 @@
-import { SectionTitle } from "components/shared/SectionTitle/styles";
+import SectionTitle from "components/shared/SectionTitle";
+
 import CashBackBanner from "./CashBackBanner";
 import InvoiceCard from "./InvoiceCard";
-
 import { StyledReceiptIcon, HeaderTitle, Container } from "./styles";
 
-export default function OrderDetails() {
+function OrderDetails() {
   return (
     <>
       <SectionTitle>
@@ -18,3 +18,5 @@ export default function OrderDetails() {
     </>
   );
 }
+
+export default OrderDetails;

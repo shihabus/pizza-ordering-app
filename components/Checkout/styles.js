@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-import CartIcon from "elements/shared/Icons/CartIcon";
 import LocationIcon from "elements/shared/Icons/LocationIcon";
-import Colors from "/elements/shared/Colors";
-import { Header1, Header4, PreTitle } from "/elements/shared/TextStyles";
+import Colors from "elements/shared/Colors";
+import { Header1, Header4, PreTitle } from "elements/shared/TextStyles";
+import CartIcon from "elements/shared/Icons/CartIcon";
 import IconButton from "elements/shared/IconButton";
 import WalletIcon from "elements/shared/Icons/WalletIcon";
 
+// Delivery Address Card
 const StyledCartIcon = styled(CartIcon)`
   fill: white;
   width: 28px;
@@ -43,6 +44,7 @@ const ContactLessDeliveryContainer = styled(ContentContainer)`
   align-items: flex-start;
 `;
 
+// Payment Card
 const LineItemContainer = styled.div`
   display: flex;
   justify-content: space-between;

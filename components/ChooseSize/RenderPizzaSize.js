@@ -1,7 +1,6 @@
-import React from "react";
 import PizzaRenderer from "components/shared/PizzaRenderer";
 
-export default function RenderPizzaSize({ pizzaInfo }) {
+function RenderPizzaSize({ pizzaInfo }) {
   const { showLabel, scale } = pizzaInfo;
   return (
     <PizzaRenderer
@@ -12,3 +11,5 @@ export default function RenderPizzaSize({ pizzaInfo }) {
     />
   );
 }
+
+export default RenderPizzaSize;

@@ -1,9 +1,10 @@
+import { ButtonText } from "elements/shared/TextStyles";
+
 import {
   BaseButton,
   FullWidthButtonWrapper,
   ButtonLabel,
   RoundedButtonWrapper,
-  DefaultButtonLabel,
 } from "./styles";
 
 function FullWidth({ children, ...props }) {
@@ -15,7 +16,7 @@ function FullWidth({ children, ...props }) {
 }
 
 function RoundedButton({ children, isActive, ...props }) {
-  const Label = isActive ? ButtonLabel : DefaultButtonLabel;
+  const Label = isActive ? ButtonLabel : ButtonText.Default;
   return (
     <RoundedButtonWrapper isActive={isActive} {...props}>
       <Label>{children}</Label>

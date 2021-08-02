@@ -1,7 +1,7 @@
-import Layout from "/elements/shared/Layout";
+import Layout from "elements/shared/Layout";
 import { Card, Section, Separator } from "elements/shared/Card";
 import EditIcon from "elements/shared/Icons/EditIcon";
-import Toggle from "/elements/shared/Toggle";
+import Toggle from "elements/shared/Toggle";
 
 import {
   HeaderContainer,
@@ -47,26 +47,24 @@ const Footer = () => (
   </ContactLessDeliveryContainer>
 );
 
-function DeliveryAddressCard() {
-  return (
-    <Layout.PaddedContainer>
-      <Card>
-        <Section>
-          <Header />
-        </Section>
-        <Separator />
-        <Section>
-          <ContentContainer>
-            <BoldText>+ Add Address</BoldText>
-          </ContentContainer>
-        </Section>
-        <Separator />
-        <Section>
-          <Footer />
-        </Section>
-      </Card>
-    </Layout.PaddedContainer>
-  );
-}
+const DeliveryAddressCard = () => (
+  <Layout.PaddedContainer>
+    <Card>
+      <Section>
+        <Header />
+      </Section>
+      <Separator />
+      <Section>
+        <ContentContainer>
+          <BoldText>+ Add Address</BoldText>
+        </ContentContainer>
+      </Section>
+      <Separator />
+      <Section>
+        <Footer />
+      </Section>
+    </Card>
+  </Layout.PaddedContainer>
+);
 
 export default DeliveryAddressCard;

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import Layout from "/elements/shared/Layout";
+import Layout from "elements/shared/Layout";
 import { Card, Section } from "elements/shared/Card";
 import EditIcon from "elements/shared/Icons/EditIcon";
-import { PreTitle } from "/elements/shared/TextStyles";
+import { PreTitle } from "elements/shared/TextStyles";
 
 import {
   LineItemContainer,

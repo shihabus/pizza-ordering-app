@@ -1,4 +1,4 @@
-### Uncle Jhon Pizzas App
+### Uncle John Pizzas App
 
 Libraries used
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { PreTitle } from "elements/shared/TextStyles";
 import Slider from "elements/shared/Slider";
 import Checkbox from "elements/shared/Checkbox";
-import Colors from "/elements/shared/Colors";
+import Colors from "elements/shared/Colors";
 
 const SliderTitle = styled.p`
   font-family: Roboto;
@@ -25,7 +25,7 @@ const StyledSlider = styled(Slider)`
   top: 180px;
 `;
 
-// ToppingCard
+// Topping Card
 const Card = styled.div`
   background-color: ${Colors.white};
   border: 0.5px solid ${Colors.stroke};

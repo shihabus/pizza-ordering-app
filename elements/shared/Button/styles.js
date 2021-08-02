@@ -40,12 +40,9 @@ const RoundedButtonWrapper = styled(BaseButton)`
   ${({ isActive }) => isActive && activeStyle}
 `;
 
-const DefaultButtonLabel = styled(ButtonText.Default)``;
-
 export {
   BaseButton,
   FullWidthButtonWrapper,
   ButtonLabel,
   RoundedButtonWrapper,
-  DefaultButtonLabel,
 };

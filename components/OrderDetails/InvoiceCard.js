@@ -1,4 +1,4 @@
-import Layout from "/elements/shared/Layout";
+import Layout from "elements/shared/Layout";
 import { Card, Section, Separator } from "elements/shared/Card";
 
 import OrderStatus from "./OrderStatus";

@@ -1,7 +1,8 @@
 import { useMemo } from "react";
-import ButtonGroup from "elements/shared/ButtonGroup";
 
 import pizzaSizeInfo from "data/pizzaSizeInfo.json";
+
+import ButtonGroup from "elements/shared/ButtonGroup";
 import CustomizationInfo from "components/shared/CustomizationInfo";
 
 import RenderPizzaSize from "./RenderPizzaSize";
@@ -13,15 +14,15 @@ const ButtonGroupTitle = () => (
   </Title>
 );
 
-const CustomizationTitle = ({ pizzaInfo }) => {
+function CustomizationTitle({ pizzaInfo }) {
   const total = 0;
   const { price } = pizzaInfo;
 
   const breadCrumb = ["size", "crust", "topping"];
   return <CustomizationInfo total={total + price} breadCrumb={breadCrumb} />;
-};
+}
 
-export default function Index({ size, setSize }) {
+function ChooseSize({ size, setSize }) {
   function onChangeHandler(option) {
     setSize(option);
   }
@@ -48,3 +49,5 @@ export default function Index({ size, setSize }) {
     </>
   );
 }
+
+export default ChooseSize;

@@ -6,8 +6,8 @@ import {
   Header1,
   Header3,
   PreTitle,
-} from "/elements/shared/TextStyles";
-import Colors from "/elements/shared/Colors";
+} from "elements/shared/TextStyles";
+import Colors from "elements/shared/Colors";
 import CartIcon from "elements/shared/Icons/CartIcon";
 
 const BlurredBorder = styled.div`

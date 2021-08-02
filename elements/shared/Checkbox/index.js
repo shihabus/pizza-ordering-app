@@ -1,5 +1,6 @@
-import CheckIcon from "elements/shared/Icons/CheckIcon";
 import PropTypes from "prop-types";
+
+import CheckIcon from "elements/shared/Icons/CheckIcon";
 
 import { Label, Input, UnCheckedStyle, CheckedStyle } from "./styles";
 
@@ -15,7 +16,7 @@ const UnChecked = (props) => (
   </UnCheckedStyle>
 );
 
-export default function Checkbox({ onClickHandler, checked, name, ...rest }) {
+function Checkbox({ onClickHandler, checked, name, ...rest }) {
   return (
     <Label htmlFor={name} onClick={onClickHandler}>
       <Input id={name} type="checkbox" checked={checked} />
@@ -24,6 +25,8 @@ export default function Checkbox({ onClickHandler, checked, name, ...rest }) {
     </Label>
   );
 }
+
+export default Checkbox;
 
 Checkbox.propTypes = {
   onClickHandler: PropTypes.func,

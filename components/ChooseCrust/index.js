@@ -1,18 +1,18 @@
 import { useMemo } from "react";
 
-import ButtonGroup from "elements/shared/ButtonGroup";
-import CustomizationInfo from "components/shared/CustomizationInfo";
-
-import pizzaCrustInfo from "data/pizzaCrustInfo.json";
-
-import RenderPizzaCrust from "./RenderPizzaCrust";
-import { PositionedContainer, Title } from "./styles";
 import {
   getOrderTotalSelector,
   getPizzaCrustSelector,
   getPizzaSizeSelector,
 } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
+import pizzaCrustInfo from "data/pizzaCrustInfo.json";
+
+import ButtonGroup from "elements/shared/ButtonGroup";
+import CustomizationInfo from "components/shared/CustomizationInfo";
+
+import RenderPizzaCrust from "./RenderPizzaCrust";
+import { PositionedContainer, Title } from "./styles";
 
 const ButtonGroupTitle = () => (
   <Title>
@@ -20,7 +20,7 @@ const ButtonGroupTitle = () => (
   </Title>
 );
 
-const CustomizationTitle = ({ pizzaInfo }) => {
+function CustomizationTitle({ pizzaInfo }) {
   const [state] = useOrderContext();
   const total = getOrderTotalSelector(state);
   const { label = "size" } = getPizzaSizeSelector(state);
@@ -34,9 +34,9 @@ const CustomizationTitle = ({ pizzaInfo }) => {
       breadCrumb={breadCrumb}
     />
   );
-};
+}
 
-export default function ChooseCrust({ crust, setCrust }) {
+function ChooseCrust({ crust, setCrust }) {
   function onChangeHandler(selectedCrust) {
     setCrust(selectedCrust);
   }
@@ -63,3 +63,5 @@ export default function ChooseCrust({ crust, setCrust }) {
     </>
   );
 }
+
+export default ChooseCrust;

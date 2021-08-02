@@ -1,9 +1,10 @@
-import PizzaRenderer from "components/shared/PizzaRenderer";
 import pizzaToppingInfo from "data/pizzaToppingsInfo.json";
 import { getPizzaImageScaleSelector } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
 
-export default function RenderPizzaTopping({ toppings }) {
+import PizzaRenderer from "components/shared/PizzaRenderer";
+
+function RenderPizzaTopping({ toppings }) {
   // mocking selection
   const lastItem = toppings[toppings?.length - 1];
 
@@ -14,3 +15,5 @@ export default function RenderPizzaTopping({ toppings }) {
 
   return <PizzaRenderer scale={scale} image={image} />;
 }
+
+export default RenderPizzaTopping;

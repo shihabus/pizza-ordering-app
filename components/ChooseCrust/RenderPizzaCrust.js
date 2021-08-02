@@ -2,7 +2,7 @@ import PizzaRenderer from "components/shared/PizzaRenderer";
 import { getPizzaImageScaleSelector } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
 
-export default function RenderPizzaCrust({ pizzaInfo }) {
+function RenderPizzaCrust({ pizzaInfo }) {
   const [state] = useOrderContext();
   const scale = getPizzaImageScaleSelector(state);
   const { showLabel, image } = pizzaInfo;
@@ -10,3 +10,5 @@ export default function RenderPizzaCrust({ pizzaInfo }) {
     <PizzaRenderer showRing label={showLabel} scale={scale} image={image} />
   );
 }
+
+export default RenderPizzaCrust;

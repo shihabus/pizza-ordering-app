@@ -1,7 +1,4 @@
-import CustomizationInfo from "components/shared/CustomizationInfo";
 import pizzaToppingInfo from "data/pizzaToppingsInfo.json";
-import RenderPizzaTopping from "./RenderPizzaTopping";
-
 import { useOrderContext } from "hooks/orderContext";
 import {
   getOrderTotalSelector,
@@ -9,11 +6,14 @@ import {
   getPizzaSizeSelector,
   getPizzaToppingSelector,
 } from "hooks/orderContext/selectors";
-import ToppingCard from "./ToppingCard";
 
+import CustomizationInfo from "components/shared/CustomizationInfo";
+
+import RenderPizzaTopping from "./RenderPizzaTopping";
+import ToppingCard from "./ToppingCard";
 import { SliderTitle, SubTitle, StyledSlider } from "./styles";
 
-const CustomizationTitle = ({ toppings }) => {
+function CustomizationTitle({ toppings }) {
   const [state] = useOrderContext();
   const total = getOrderTotalSelector(state);
   const addedToppings = getPizzaToppingSelector(state);
@@ -41,7 +41,7 @@ const CustomizationTitle = ({ toppings }) => {
       total={total - alreadyInCart + totalPrice}
     />
   );
-};
+}
 
 const SliderHeader = () => (
   <>
@@ -52,7 +52,7 @@ const SliderHeader = () => (
   </>
 );
 
-export default function ChooseTopping({ toppings, setToppings }) {
+function ChooseTopping({ toppings, setToppings }) {
   const canSelectMoreItems = toppings.length < 7;
 
   function onChangeHandler(value) {
@@ -86,3 +86,5 @@ export default function ChooseTopping({ toppings, setToppings }) {
     </>
   );
 }
+
+export default ChooseTopping;

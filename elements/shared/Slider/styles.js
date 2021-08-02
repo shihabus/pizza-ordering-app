@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { hideScrollBar, inlineStyles } from "Utils/stylesUtil";
 
 const Container = styled.div`
