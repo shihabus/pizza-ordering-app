@@ -51,17 +51,6 @@ const inActiveDotStyle = css`
   border: 1px solid ${Colors.stroke};
   box-sizing: border-box;
   box-shadow: inset 0px 2px 8px rgba(160, 168, 204, 0.4);
-
-  & > svg {
-    ${({ stroke }) =>
-      stroke
-        ? css`
-            stroke: ${Colors.stroke};
-          `
-        : css`
-            fill: ${Colors.stroke};
-          `}
-  }
 `;
 
 const activeDotStyle = css`
@@ -75,17 +64,6 @@ const activeDotStyle = css`
   border: 1px solid ${Colors.red};
   box-sizing: border-box;
   box-shadow: 0px 6px 25px rgba(245, 49, 63, 0.4);
-
-  & > svg {
-    ${({ stroke }) =>
-      stroke
-        ? css`
-            stroke: ${Colors.red};
-          `
-        : css`
-            fill: ${Colors.red};
-          `}
-  }
 `;
 
 const DotContainer = styled.div`

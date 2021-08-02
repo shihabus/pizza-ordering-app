@@ -5,6 +5,7 @@ import FoodIcon from "elements/shared/Icons/FoodIcon";
 import BagIcon from "elements/shared/Icons/BagIcon";
 import BikeIcon from "elements/shared/Icons/BikeIcon";
 import HomeIcon from "elements/shared/Icons/HomeIcon";
+import Colors from "elements/shared/Colors";
 
 import { DotContainer, StepText } from "./styles";
 
@@ -13,31 +14,36 @@ const orderStatusData = [
     id: 1,
     label: "Order Confirmed",
     time: "11:41 am",
-    icon: <CheckIcon />,
+    inActiveIcon: <CheckIcon />,
+    activeIcon: <CheckIcon stroke={Colors.red} />,
   },
   {
     id: 2,
     label: "Preparing....",
     time: "12:01pm",
-    icon: <FoodIcon />,
+    inActiveIcon: <FoodIcon />,
+    activeIcon: <FoodIcon fill={Colors.red} />,
   },
   {
     id: 3,
     label: "Dispatched",
     time: "12:10 pm",
-    icon: <BagIcon />,
+    inActiveIcon: <BagIcon />,
+    activeIcon: <BagIcon fill={Colors.red} />,
   },
   {
     id: 4,
     label: "In Transit",
     time: "11:41 am",
-    icon: <BikeIcon />,
+    inActiveIcon: <BikeIcon />,
+    activeIcon: <BikeIcon fill={Colors.red} />,
   },
   {
     id: 5,
     label: "Delivered",
     time: "1:00 pm",
-    icon: <HomeIcon />,
+    inActiveIcon: <HomeIcon />,
+    activeIcon: <HomeIcon fill={Colors.red} />,
   },
 ];
 
@@ -51,17 +57,20 @@ function TextContainer({ isDone, time, label }) {
 }
 
 function OrderStatus() {
-  const currentActiveStep = 5;
+  const currentActiveStep = 2;
   return (
     <TimeLine currentActiveStep={currentActiveStep}>
-      {orderStatusData.map(({ id, label, time, icon }) => (
+      {orderStatusData.map(({ id, label, time, inActiveIcon, activeIcon }) => (
         <TimeLine.Item key={id}>
           <TimeLine.Dot>
-            {({ isActive, isDone }) => (
-              <DotContainer isDone={isDone || isActive} stroke>
-                {icon}
-              </DotContainer>
-            )}
+            {({ isActive, isDone }) => {
+              const completed = isDone || isActive;
+              return (
+                <DotContainer isDone={completed}>
+                  {completed ? activeIcon : inActiveIcon}
+                </DotContainer>
+              );
+            }}
           </TimeLine.Dot>
           <TimeLine.Content>
             {({ isActive, isDone }) => (

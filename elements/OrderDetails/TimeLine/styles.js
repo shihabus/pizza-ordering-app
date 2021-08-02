@@ -11,7 +11,6 @@ const Wrapper = styled.ul`
 
 const TimeLineContainer = styled.li`
   position: relative;
-  padding-bottom: 10px;
 
   ${({ showLine }) =>
     showLine &&
@@ -30,13 +29,13 @@ const TimeLineContainer = styled.li`
             background-color: ${Colors.red};
           `}
       }
-      padding-bottom: 50px;
+      min-height: 80px;
     `}
 `;
 
 const Dot = styled.div`
   position: absolute;
-  transform: translate(-50%, -16%);
+  transform: translate(-50%, -8px);
 `;
 
 const TextContainerWrapper = styled.div`
