@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { toPriceLabel } from "utils/helperUtils";
+import { toPriceLabel } from "Utils/helperUtils";
 
 import { TitleContainer, Title, Price, BreadCrumb, Crumb } from "./styles";
 

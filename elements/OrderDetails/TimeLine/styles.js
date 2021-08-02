@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import Colors from "elements/shared/Colors";
-import { inlineStyles } from "utils/stylesUtil";
+import { inlineStyles } from "Utils/stylesUtil";
 
 const Wrapper = styled.ul`
   padding: 40px;

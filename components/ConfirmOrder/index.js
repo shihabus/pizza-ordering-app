@@ -1,4 +1,4 @@
-import { toPriceLabel } from "utils/helperUtils";
+import { toPriceLabel } from "Utils/helperUtils";
 
 import SectionTitle from "components/shared/SectionTitle";
 

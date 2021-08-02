@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Constants, inlineStyles } from "utils/stylesUtil";
+import { Constants, inlineStyles } from "Utils/stylesUtil";
 
 import Colors from "elements/shared/Colors";
 
