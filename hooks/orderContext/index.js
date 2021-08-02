@@ -14,30 +14,43 @@ const initialState = {
 // if customization already exist
 // decrease its price and add the new one
 function calculateOrderTotal(state = {}, key = "", price = 0) {
-  const amountToDecrement = state[key]?.price || 0;
   const currentTotal = state.orderTotal;
+  const amountToDecrement = state[key]?.price || 0;
   return currentTotal + price - amountToDecrement;
 }
 
-// if topping is already added remove it
-// if not, add it
-function updateToppingHelper(state, topping) {}
+function calculateToppingsPrice(currentState, newToppings) {
+  const currentTotal = currentState.orderTotal;
+  const toppingPriceReducer = (acc, topping) => acc + topping?.price;
+  const newToppingPrice = newToppings?.reduce(toppingPriceReducer, 0);
+
+  const oldToppingPrice = currentState.toppings?.reduce(toppingPriceReducer, 0);
+
+  return currentTotal + newToppingPrice - oldToppingPrice;
+}
 
 function OrderContextProvider({ ...props }) {
+  let orderTotal = 0;
   const [state, dispatch] = React.useReducer(
     (state, action) => {
-      let orderTotal = calculateOrderTotal(
-        state,
-        action.payload?.key,
-        action.payload?.price
-      );
       switch (action.type) {
         case UPDATE_SIZE:
+          orderTotal = calculateOrderTotal(
+            state,
+            action.payload?.key,
+            action.payload?.price
+          );
           return { ...state, size: action.payload, orderTotal };
         case UPDATE_CRUST:
+          orderTotal = calculateOrderTotal(
+            state,
+            action.payload?.key,
+            action.payload?.price
+          );
           return { ...state, crust: action.payload, orderTotal };
         case UPDATE_TOPPINGS:
-          return { ...state, crust: action.payload, orderTotal };
+          orderTotal = calculateToppingsPrice(state, action.payload.toppings);
+          return { ...state, toppings: action.payload.toppings, orderTotal };
         default:
           return { ...state };
       }

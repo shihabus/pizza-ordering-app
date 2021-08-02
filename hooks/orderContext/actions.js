@@ -6,5 +6,5 @@ export const updatePizzaSize = (dispatch, payload) =>
 export const updatePizzaCrust = (dispatch, payload) =>
   dispatch({ type: UPDATE_CRUST, payload: { ...payload, key: "crust" } });
 
-export const updatePizzaToppings = (dispatch, payload) =>
-  dispatch({ type: UPDATE_TOPPINGS, payload: { ...payload, key: "toppings" } });
+export const updatePizzaToppings = (dispatch, toppings) =>
+  dispatch({ type: UPDATE_TOPPINGS, payload: { toppings, key: "toppings" } });

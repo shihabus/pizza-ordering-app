@@ -14,7 +14,8 @@ const TitleContainer = styled(Layout.PaddedContainer)`
   grid-template-rows: max-content;
   grid-template-areas:
     "title price"
-    "breadcrumb breadcrumb";
+    "breadcrumb .";
+  grid-column-gap: 2px;
 `;
 
 const Title = styled(Header1)`
@@ -35,6 +36,7 @@ const BreadCrumb = styled.div`
   grid-area: breadcrumb;
 `;
 
+// TODO: check
 const Crumb = styled(PreTitle)`
   display: inline-block;
   color: rgba(255, 255, 255, 0.3);

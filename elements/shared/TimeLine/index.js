@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Wrapper, TimeLineContainer, Dot, TextContainer } from "./styles";
+import {
+  Wrapper,
+  TimeLineContainer,
+  Dot,
+  TextContainerWrapper,
+} from "./styles";
 
 const TimeLine = ({ children, currentActiveStep, ...props }) => (
   <Wrapper {...props}>
@@ -42,6 +47,10 @@ const TimelineItem = ({
 const TimelineDot = ({ children, isDone, isActive }) => {
   return <Dot>{children({ isDone, isActive })}</Dot>;
 };
+
+const TextContainer = ({ children, isDone, isActive }) => (
+  <TextContainerWrapper>{children({ isDone, isActive })}</TextContainerWrapper>
+);
 
 TimeLine.Item = TimelineItem;
 TimeLine.Dot = TimelineDot;

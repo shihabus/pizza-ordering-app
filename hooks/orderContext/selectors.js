@@ -7,18 +7,21 @@ export const getPizzaToppingSelector = (state) => state.toppings;
 export const getOrderTotalSelector = (state) => state.orderTotal;
 
 export const getOrderSummarySelector = (state) => {
-  const summary = [];
+  let summary = [];
   const size = getPizzaSizeSelector(state);
   if (!isEmptyObject(size)) {
-    summary = [...summary, { label: `${size} Size`, cost: size.price }];
+    summary = [...summary, { label: `${size.label} Size`, cost: size.price }];
   }
   const crust = getPizzaCrustSelector(state);
   if (!isEmptyObject(crust)) {
-    summary = [...summary, { label: `${crust} Crust`, cost: crust.price }];
+    summary = [
+      ...summary,
+      { label: `${crust.label} Crust`, cost: crust.price },
+    ];
   }
   const toppings = getPizzaToppingSelector(state);
   const toppingInfo = toppings?.map((topping) => ({
-    label: topping,
+    label: topping.label,
     cost: topping.price,
   }));
   summary = [...summary, ...toppingInfo];

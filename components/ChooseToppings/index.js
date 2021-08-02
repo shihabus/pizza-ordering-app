@@ -7,6 +7,7 @@ import {
   getOrderTotalSelector,
   getPizzaCrustSelector,
   getPizzaSizeSelector,
+  getPizzaToppingSelector,
 } from "hooks/orderContext/selectors";
 import ToppingCard from "./ToppingCard";
 
@@ -15,20 +16,30 @@ import { SliderTitle, SubTitle, StyledSlider } from "./styles";
 const CustomizationTitle = ({ toppings }) => {
   const [state] = useOrderContext();
   const total = getOrderTotalSelector(state);
+  const addedToppings = getPizzaToppingSelector(state);
   const { label: sizeLabel = "size" } = getPizzaSizeSelector(state);
   const { label: crustLabel = "crust" } = getPizzaCrustSelector(state);
 
-  const exceededFreeLimit = toppings.length > 3;
+  const alreadyInCart = addedToppings.reduce((acc, item) => {
+    return acc + item?.price;
+  }, 0);
 
-  const totalPrice = exceededFreeLimit
-    ? toppings.reduce((acc, item) => {
-        return acc + pizzaToppingInfo[item]?.price;
-      }, 0)
-    : 0;
+  const totalPrice = toppings.reduce((acc, item) => {
+    return acc + pizzaToppingInfo[item]?.price;
+  }, 0);
 
-  const breadCrumb = [sizeLabel, crustLabel, "topping"];
+  // change to label
+  const breadCrumb = [
+    sizeLabel,
+    crustLabel,
+    ...(toppings?.length ? toppings : ["toppings"]),
+  ];
+
   return (
-    <CustomizationInfo breadCrumb={breadCrumb} total={total + totalPrice} />
+    <CustomizationInfo
+      breadCrumb={breadCrumb}
+      total={total - alreadyInCart + totalPrice}
+    />
   );
 };
 

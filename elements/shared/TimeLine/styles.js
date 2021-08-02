@@ -30,7 +30,7 @@ const TimeLineContainer = styled.li`
             background-color: ${Colors.red};
           `}
       }
-      padding-bottom: 34px;
+      padding-bottom: 50px;
     `}
 `;
 
@@ -39,7 +39,7 @@ const Dot = styled.div`
   transform: translate(-50%, -25%);
 `;
 
-const TextContainer = styled.div`
+const TextContainerWrapper = styled.div`
   max-height: 30px;
   padding-left: 46px;
   display: flex;
@@ -47,4 +47,4 @@ const TextContainer = styled.div`
   flex-direction: column;
 `;
 
-export { Wrapper, TimeLineContainer, Dot, TextContainer };
+export { Wrapper, TimeLineContainer, Dot, TextContainerWrapper };

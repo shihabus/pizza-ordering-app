@@ -14,7 +14,7 @@
   "pepperoni": {
     "label": "Pepperoni",
     "value": "pepperoni",
-    "price": 1.0,
+    "price": 1,
     "showLabel": "$ 1.00",
     "itemImage": "/assets/images/pepperoni.png",
     "image": "/assets/images/pizzaPepperoni.png"
@@ -22,8 +22,8 @@
   "mushrooms": {
     "label": "Mushrooms",
     "value": "mushrooms",
-    "price": 0,
-    "showLabel": "$ 0.00",
+    "price": 1.1,
+    "showLabel": "$ 1.10",
     "itemImage": "/assets/images/mushroom.png",
     "image": "/assets/images/pizzaMushroom.png"
   },
@@ -63,7 +63,7 @@
     "label": "Green Peppers",
     "value": "green_peppers",
     "price": 0.5,
-    "showLabel": "$ 0.5",
+    "showLabel": "$ 0.50",
     "itemImage": "/assets/images/pepperoni.png",
     "image": "/assets/images/pizzaPepperoni.png"
   },
@@ -79,15 +79,15 @@
     "label": "Spinach",
     "value": "spinach",
     "price": 1.5,
-    "showLabel": "$ 1.5",
+    "showLabel": "$ 1.50",
     "itemImage": "/assets/images/pepperoni.png",
     "image": "/assets/images/pizzaMushroom.png"
   },
   "onions": {
     "label": "Onions",
     "value": "onions",
-    "price": 0,
-    "showLabel": "$ 0.00",
+    "price": 0.5,
+    "showLabel": "$ 0.50",
     "itemImage": "/assets/images/mushroom.png",
     "image": "/assets/images/pizzaOnion.png"
   }

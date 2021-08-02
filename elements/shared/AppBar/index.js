@@ -10,7 +10,7 @@ function Home() {
   return (
     <Link href={routeConstants.chooseSize} passHref>
       <NavButton>
-        <HomeIcon />
+        <HomeIcon fill="#6D6E9C" />
       </NavButton>
     </Link>
   );
