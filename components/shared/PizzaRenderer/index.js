@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import {
   BlurredBorder,
@@ -10,21 +11,30 @@ import {
 } from "./styles";
 
 function Pizza(props) {
-  const { image, showRing, label, scale } = props;
+  const { image, showRing, label, scale, animationConfig } = props;
 
   return (
-    <BlurredBorder scale={scale}>
-      <Plate>
-        <PizzaImage src={image} width="216" height="216" alt="pizza image" />
-      </Plate>
-      {showRing && (
-        <Ring>
-          <PizzaLabel>
-            <LabelText>{label}</LabelText>
-          </PizzaLabel>
-        </Ring>
-      )}
-    </BlurredBorder>
+    <TransitionGroup appear={true}>
+      <CSSTransition {...animationConfig}>
+        <BlurredBorder scale={scale}>
+          <Plate>
+            <PizzaImage
+              src={image}
+              width="216"
+              height="216"
+              alt="pizza image"
+            />
+          </Plate>
+          {showRing && (
+            <Ring>
+              <PizzaLabel>
+                <LabelText>{label}</LabelText>
+              </PizzaLabel>
+            </Ring>
+          )}
+        </BlurredBorder>
+      </CSSTransition>
+    </TransitionGroup>
   );
 }
 
@@ -35,6 +45,7 @@ Pizza.propTypes = {
   showRing: PropTypes.bool,
   label: PropTypes.string,
   scale: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
 Pizza.defaultProps = {

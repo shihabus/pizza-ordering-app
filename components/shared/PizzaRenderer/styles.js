@@ -1,7 +1,53 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { PreTitle } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
+
+const transitionStyle = css`
+  &.fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  &.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 100ms linear 100ms;
+  }
+
+  /* exit */
+  &.fade-exit {
+    opacity: 1;
+  }
+  &.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1000ms linear;
+  }
+  &.fade-exit-done {
+    opacity: 0;
+  }
+`;
+
+const imageTransitionStyle = css`
+  &.image-fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  &.image-fade-enter.image-fade-enter-active {
+    opacity: 1;
+    transition: opacity 100ms linear 100ms;
+  }
+
+  /* exit */
+  &.image-fade-exit {
+    opacity: 1;
+  }
+  &.image-fade-exit.image-fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms linear;
+  }
+  &.image-fade-exit-done {
+    opacity: 0;
+  }
+`;
 
 const BlurredBorder = styled.div`
   --ring-width: 375px;
@@ -26,6 +72,8 @@ const BlurredBorder = styled.div`
   right: 0;
   /* change scale with pizza size s=1,m=1.05,l=1.1 */
   transform: translateY(-50%) scale(var(--scale-ratio));
+
+  ${transitionStyle};
 `;
 
 const Plate = styled.div`
@@ -42,6 +90,7 @@ const Plate = styled.div`
 
 const PizzaImage = styled.img`
   border-radius: 50%;
+  ${imageTransitionStyle};
 `;
 
 const Ring = styled.div`
