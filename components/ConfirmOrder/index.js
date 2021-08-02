@@ -1,3 +1,5 @@
+import { toPriceLabel } from "utils/helperUtils";
+
 import SectionTitle from "components/shared/SectionTitle";
 
 import { Section, Separator } from "elements/shared/Card";
@@ -20,8 +22,6 @@ import {
   StyledCartIcon,
 } from "./styles";
 
-const toPrice = (price) => parseFloat(price).toFixed(2);
-
 const Header = () => (
   <SectionTitle>
     <PizzaIcon />
@@ -38,7 +38,7 @@ function TotalPriceSection({ orderTotal }) {
     <PriceContainer>
       <LineItems>
         <BodyText>Total</BodyText>
-        <OrderTotalPrice>{toPrice(orderTotal)}</OrderTotalPrice>
+        <OrderTotalPrice>{toPriceLabel(orderTotal)}</OrderTotalPrice>
       </LineItems>
     </PriceContainer>
   );
@@ -50,7 +50,7 @@ function CartItemSummary({ orderSummary }) {
       {orderSummary.map((orderItem) => (
         <LineItems key={orderItem}>
           <OrderItemLabel>{orderItem.label}</OrderItemLabel>
-          <OrderItemPrice>{toPrice(orderItem.cost)}</OrderItemPrice>
+          <OrderItemPrice>{toPriceLabel(orderItem.cost)}</OrderItemPrice>
         </LineItems>
       ))}
     </ItemsContainer>

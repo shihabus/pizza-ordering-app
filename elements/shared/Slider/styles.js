@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { hideScrollBar, inlineStyles } from "Utils/stylesUtil";
+import { hideScrollBar, inlineStyles } from "utils/stylesUtil";
 
 const Container = styled.div`
   position: relative;

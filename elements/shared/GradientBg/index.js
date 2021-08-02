@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { inlineStyles } from "Utils/stylesUtil";
+import { inlineStyles } from "utils/stylesUtil";
 
 import { Gradients } from "elements/shared/Colors";
 

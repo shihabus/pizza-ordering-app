@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Constants } from "Utils/stylesUtil";
+import { Constants } from "utils/stylesUtil";
 
 import { ButtonText } from "elements/shared/TextStyles";
 import { BaseButton } from "elements/shared/Button";

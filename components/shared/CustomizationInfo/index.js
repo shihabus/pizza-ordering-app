@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { toPriceLabel } from "utils/helperUtils";
 
 import { TitleContainer, Title, Price, BreadCrumb, Crumb } from "./styles";
 
@@ -8,7 +9,7 @@ function CustomizationInfo(props) {
   return (
     <TitleContainer>
       <Title>{title}</Title>
-      <Price>{total?.toFixed(2)}</Price>
+      <Price>{toPriceLabel(total)}</Price>
       <BreadCrumb>
         {breadCrumb?.map((crumb, idx) => (
           <Crumb key={idx}>

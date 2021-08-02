@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { inlineStyles } from "Utils/stylesUtil";
+import { inlineStyles } from "utils/stylesUtil";
 import Colors from "elements/shared/Colors";
 
 const Card = styled.div`

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Constants } from "Utils/stylesUtil";
+import { Constants } from "utils/stylesUtil";
 
 const BottomContainer = styled.div`
   position: absolute;

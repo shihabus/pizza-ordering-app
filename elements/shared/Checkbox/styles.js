@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 import Colors, { Gradients } from "elements/shared/Colors";
-import { inlineStyles } from "Utils/stylesUtil";
 
 const Label = styled.label`
   display: inline-flex;

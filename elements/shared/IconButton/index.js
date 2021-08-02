@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { inlineStyles } from "Utils/stylesUtil";
+import { inlineStyles } from "utils/stylesUtil";
 
 import { BaseButton } from "elements/shared/Button";
 import Colors, { Gradients } from "elements/shared/Colors";

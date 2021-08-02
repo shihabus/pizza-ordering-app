@@ -1,4 +1,4 @@
-import { isEmptyObject } from "Utils/objectUtil";
+import { isEmptyObject } from "utils/objectUtil";
 
 export const getPizzaSizeSelector = (state) => state.size;
 export const getPizzaImageScaleSelector = (state) => state.size?.scale || 1;
