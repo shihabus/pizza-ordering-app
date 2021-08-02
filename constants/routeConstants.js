@@ -1,5 +1,5 @@
 export const routeConstants = {
-  chooseSize: "/choose-size",
+  chooseSize: "/",
   chooseCrust: "/choose-crust",
   chooseTopping: "/choose-topping",
   confirmOrder: "/confirm-order",

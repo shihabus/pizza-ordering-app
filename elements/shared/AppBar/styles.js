@@ -29,6 +29,7 @@ const NavWrapper = styled.ul`
 
 const NavItem = styled.li`
   display: flex;
+  min-width: 34px;
 `;
 
 const Left = styled(NavItem)`
@@ -40,6 +41,7 @@ const Left = styled(NavItem)`
 
 const Right = styled(NavItem)`
   grid-area: right;
+
   & > * {
     margin-left: 6px;
   }
