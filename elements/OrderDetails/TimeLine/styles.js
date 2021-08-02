@@ -36,7 +36,7 @@ const TimeLineContainer = styled.li`
 
 const Dot = styled.div`
   position: absolute;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%, -16%);
 `;
 
 const TextContainerWrapper = styled.div`

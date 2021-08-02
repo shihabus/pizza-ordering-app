@@ -1,4 +1,4 @@
-import TimeLine from "elements/shared/TimeLine";
+import TimeLine from "elements/OrderDetails/TimeLine";
 import CheckIcon from "elements/shared/Icons/CheckIcon";
 import { PreTitle } from "elements/shared/TextStyles";
 import FoodIcon from "elements/shared/Icons/FoodIcon";

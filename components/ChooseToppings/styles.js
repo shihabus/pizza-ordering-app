@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { PreTitle } from "elements/shared/TextStyles";
-import Slider from "elements/shared/Slider";
+import Slider from "elements/ChooseToppings/Slider";
 import Checkbox from "elements/shared/Checkbox";
 import Colors from "elements/shared/Colors";
 
