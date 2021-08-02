@@ -95,7 +95,7 @@ const LineItems = styled.div`
 `;
 
 const HeaderTitle = styled(Header1)`
-  color: #ffffff;
+  color: ${Colors.white};
 `;
 
 const StyledCartIcon = styled(CartIcon)`

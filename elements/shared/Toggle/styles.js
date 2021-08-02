@@ -40,7 +40,7 @@ const Slider = styled.span`
   &::before {
     position: absolute;
     content: "";
-    transition: 0.5s ease-in-out;
+    transition: 0.5s;
 
     width: var(--dot-dia);
     height: var(--dot-dia);
@@ -64,7 +64,7 @@ const Slider = styled.span`
       background: ${Gradients.red};
       box-shadow: 0px 5px 10px rgba(245, 49, 63, 0.4);
 
-      transition: 0.5s all ease-in-out;
+      transition: 0.5s all;
       transform: translateX(var(--translate-by));
     }
   }

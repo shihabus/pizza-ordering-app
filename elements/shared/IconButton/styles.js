@@ -5,7 +5,7 @@ import Colors, { Gradients } from "elements/shared/Colors";
 import { inlineStyles } from "Utils/stylesUtil";
 
 const defaultIconButtonStyle = css`
-  background-color: rgba(245, 49, 63, 0.1);
+  background: rgba(245, 49, 63, 0.1);
   & svg {
     fill: ${Colors.orange};
   }

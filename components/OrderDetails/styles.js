@@ -38,7 +38,7 @@ const InvoiceCardHeader = styled.div`
 const TitleText = styled(PreTitle)``;
 
 const ContentText = styled(Header4)`
-  color: #f5313f;
+  color: ${Colors.red};
 `;
 
 const InvoiceCardBody = styled.div`
@@ -47,8 +47,8 @@ const InvoiceCardBody = styled.div`
 `;
 
 const inActiveDotStyle = css`
-  background: #f4f3f9;
-  border: 1px solid #dadae5;
+  background-color: ${Colors.lightGray};
+  border: 1px solid ${Colors.stroke};
   box-sizing: border-box;
   box-shadow: inset 0px 2px 8px rgba(160, 168, 204, 0.4);
 
@@ -56,10 +56,10 @@ const inActiveDotStyle = css`
     ${({ stroke }) =>
       stroke
         ? css`
-            stroke: #dadae5;
+            stroke: ${Colors.stroke};
           `
         : css`
-            fill: #dadae5;
+            fill: ${Colors.stroke};
           `}
   }
 `;
@@ -72,7 +72,7 @@ const activeDotStyle = css`
     ),
     #f4f3f9;
 
-  border: 1px solid #f5313f;
+  border: 1px solid ${Colors.red};
   box-sizing: border-box;
   box-shadow: 0px 6px 25px rgba(245, 49, 63, 0.4);
 
@@ -80,10 +80,10 @@ const activeDotStyle = css`
     ${({ stroke }) =>
       stroke
         ? css`
-            stroke: #f5313f;
+            stroke: ${Colors.red};
           `
         : css`
-            fill: #f5313f;
+            fill: ${Colors.red};
           `}
   }
 `;
@@ -105,7 +105,7 @@ const StepText = styled.p`
   font-weight: 300;
   font-size: 14px;
   line-height: 15px;
-  color: #6d6e9c;
+  color: ${Colors.purple};
 
   ${({ isDone }) =>
     isDone &&
@@ -139,7 +139,7 @@ const IconContainer = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  background: #def3e1;
+  background-color: #def3e1;
   border: 1px solid #57c168;
   box-shadow: 0px 6px 25px rgba(87, 193, 104, 0.3);
   border-radius: 50%;
@@ -182,7 +182,7 @@ const CashBackText = styled.p`
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
-  color: #6d6e9c;
+  color: ${Colors.purple};
 `;
 
 export {

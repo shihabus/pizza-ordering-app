@@ -1,7 +1,9 @@
-const { PreTitle } = require("elements/shared/TextStyles");
-const { default: styled } = require("styled-components");
+import styled from "styled-components";
+
+import { PreTitle } from "elements/shared/TextStyles";
 import Slider from "elements/shared/Slider";
 import Checkbox from "elements/shared/Checkbox";
+import Colors from "/elements/shared/Colors";
 
 const SliderTitle = styled.p`
   font-family: Roboto;
@@ -12,11 +14,11 @@ const SliderTitle = styled.p`
   text-align: center;
   letter-spacing: -0.3px;
 
-  color: #6d6e9c;
+  color: ${Colors.purple};
 `;
 
 const SubTitle = styled(PreTitle)`
-  color: #a0a8cc;
+  color: ${Colors.lightPurple};
 `;
 
 const StyledSlider = styled(Slider)`
@@ -25,8 +27,8 @@ const StyledSlider = styled(Slider)`
 
 // ToppingCard
 const Card = styled.div`
-  background: #ffffff;
-  border: 0.5px solid #dadae5;
+  background-color: ${Colors.white};
+  border: 0.5px solid ${Colors.stroke};
   box-sizing: border-box;
   box-shadow: 0px 4px 15px rgba(218, 218, 229, 0.7);
   border-radius: 20px;
@@ -65,7 +67,7 @@ const Title = styled.p`
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  color: #6d6e9c;
+  color: ${Colors.purple};
 `;
 
 const Price = styled.p`
@@ -77,7 +79,7 @@ const Price = styled.p`
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
-  color: #6d6e9c;
+  color: ${Colors.purple};
 `;
 
 const CTA = styled.div`

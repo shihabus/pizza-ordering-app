@@ -1,8 +1,10 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+
 import { routeConstants } from "constants/routeConstants";
 import HomeIcon from "elements/shared/Icons/HomeIcon";
 import BackIcon from "elements/shared/Icons/BackIcon";
+import Colors from "elements/shared/Colors";
 
 import { Nav, NavWrapper, Left, Right, Title, NavButton } from "./styles";
 
@@ -10,7 +12,7 @@ function Home() {
   return (
     <Link href={routeConstants.chooseSize} passHref>
       <NavButton>
-        <HomeIcon fill="#6D6E9C" />
+        <HomeIcon fill={Colors.purple} />
       </NavButton>
     </Link>
   );

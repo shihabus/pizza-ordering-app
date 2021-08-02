@@ -50,7 +50,7 @@ const LineItemContainer = styled.div`
 `;
 
 const CardHeader = styled(Header4)`
-  color: #f5313f;
+  color: ${Colors.red};
 `;
 
 const BoldText = styled.p`
@@ -59,7 +59,7 @@ const BoldText = styled.p`
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  color: #6d6e9c;
+  color: ${Colors.purple};
 `;
 
 const BodyText = styled.p`
@@ -68,16 +68,16 @@ const BodyText = styled.p`
   font-weight: 300;
   font-size: 14px;
   line-height: 15px;
-  color: #6d6e9c;
+  color: ${Colors.purple};
 `;
 
 const StyledLocationIcon = styled(LocationIcon)`
-  fill: #f5313f;
+  fill: ${Colors.red};
   margin-right: 8px;
 `;
 
 const StyledWalletIcon = styled(WalletIcon)`
-  fill: #f5313f;
+  fill: ${Colors.red};
   margin-right: 8px;
 `;
 
@@ -92,7 +92,7 @@ const PaymentCardContainer = styled.div`
 `;
 
 const CashbackText = styled(PreTitle)`
-  background: #def3e1;
+  background-color: #def3e1;
   border-radius: 10px;
   color: #57c168;
   padding: 8px 16px !important;

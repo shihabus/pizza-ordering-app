@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { inlineStyles } from "Utils/stylesUtil";
+import Colors from "elements/shared/Colors";
 
 const Card = styled.div`
   & > div {
@@ -21,7 +22,7 @@ const Card = styled.div`
 
 const Separator = styled.hr`
   border: none;
-  border-top: 0.5px solid #dadae5;
+  border-top: 0.5px solid ${Colors.stroke};
 `;
 
 export { Card, Separator };
