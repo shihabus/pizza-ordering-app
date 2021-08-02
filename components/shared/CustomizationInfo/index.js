@@ -11,10 +11,10 @@ function CustomizationInfo(props) {
       <Title>{title}</Title>
       <Price>{toPriceLabel(total)}</Price>
       <BreadCrumb>
-        {breadCrumb?.map((crumb, idx) => (
-          <Crumb key={idx}>
-            {crumb}
-            {breadCrumb.length > idx + 1 && ", "}
+        {breadCrumb?.map(({ label, isDone }, idx) => (
+          <Crumb key={idx} isDone={isDone}>
+            {label}
+            {breadCrumb.length > idx + 1 && ","}
           </Crumb>
         ))}
       </BreadCrumb>

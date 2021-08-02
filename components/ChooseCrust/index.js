@@ -27,7 +27,11 @@ function CustomizationTitle({ pizzaInfo }) {
   const { price: deductCrustPrice = 0 } = getPizzaCrustSelector(state);
   const { price = 0 } = pizzaInfo;
 
-  const breadCrumb = [label, "crust", "topping"];
+  const breadCrumb = [
+    { label, isDone: true },
+    { label: "crust", isDone: false },
+    { label: "crust", isDone: false },
+  ];
   return (
     <CustomizationInfo
       total={total + price - deductCrustPrice}

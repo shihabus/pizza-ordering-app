@@ -18,7 +18,11 @@ function CustomizationTitle({ pizzaInfo }) {
   const total = 0;
   const { price } = pizzaInfo;
 
-  const breadCrumb = ["size", "crust", "topping"];
+  const breadCrumb = [
+    { label: "size", isDone: false },
+    { label: "crust", isDone: false },
+    { label: "crust", isDone: false },
+  ];
   return <CustomizationInfo total={total + price} breadCrumb={breadCrumb} />;
 }
 

@@ -34,12 +34,17 @@ const Price = styled(Header2)`
 
 const BreadCrumb = styled.div`
   grid-area: breadcrumb;
+  & > p::after {
+    content: " ";
+    display: inline-bottom;
+    padding-right: 4px;
+  }
 `;
 
-// TODO: check
 const Crumb = styled(PreTitle)`
   display: inline-block;
-  color: rgba(255, 255, 255, 0.3);
+  color: ${({ isDone }) =>
+    isDone ? Colors.white : "rgba(255, 255, 255, 0.3)"};
 `;
 
 export { TitleContainer, Title, Price, BreadCrumb, Crumb };

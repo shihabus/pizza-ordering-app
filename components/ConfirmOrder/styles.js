@@ -43,7 +43,7 @@ const OrderSummary = styled(Card)`
   width: 270px;
   top: 0;
   transform: translate(-10px, 250px);
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 `;
 
 const ContentContainer = styled.div`

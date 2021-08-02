@@ -28,11 +28,21 @@ function CustomizationTitle({ toppings }) {
     return acc + pizzaToppingInfo[item]?.price;
   }, 0);
 
-  // change to label
+  let toppingBreadCrumb = [{ label: "toppings", isDone: false }];
+
+  if (toppings?.length) {
+    toppingBreadCrumb = [
+      ...toppings.map((topping) => ({
+        label: pizzaToppingInfo[topping].label,
+        isDone: true,
+      })),
+    ];
+  }
+
   const breadCrumb = [
-    sizeLabel,
-    crustLabel,
-    ...(toppings?.length ? toppings : ["toppings"]),
+    { label: sizeLabel, isDone: true },
+    { label: crustLabel + " crust", isDone: true },
+    ...toppingBreadCrumb,
   ];
 
   return (
