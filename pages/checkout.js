@@ -2,16 +2,16 @@ import { useRouter } from "next/router";
 
 import { routeConstants } from "constants/routeConstants";
 
-import NavBar from "/components/shared/NavBar";
-import PageTitle from "/components/shared/PageTitle";
-import Checkout from "/components/Checkout";
+import NavBar from "components/shared/NavBar";
+import PageTitle from "components/shared/PageTitle";
+import Checkout from "components/Checkout";
 
-import Layout from "/elements/shared/Layout";
+import Layout from "elements/shared/Layout";
 import GradientBg from "elements/shared/GradientBg";
 import BottomBar from "elements/shared/BottomBar";
-import { FullWidth } from "/elements/shared/Button";
+import { FullWidth } from "elements/shared/Button";
 
-export default function CheckoutPage() {
+function CheckoutPage() {
   const router = useRouter();
 
   function clickHandler() {
@@ -33,3 +33,5 @@ export default function CheckoutPage() {
     </>
   );
 }
+
+export default CheckoutPage;

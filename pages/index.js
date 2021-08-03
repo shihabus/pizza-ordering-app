@@ -16,7 +16,7 @@ import BottomBar from "elements/shared/BottomBar";
 import { FullWidth } from "elements/shared/Button";
 import GradientBg from "elements/shared/GradientBg";
 
-export default function ChooseSizePage() {
+function ChooseSizePage() {
   const [state, dispatch] = useOrderContext();
   const currentSize = getPizzaSizeSelector(state);
   const [size, setSize] = useState(currentSize?.label || "medium");
@@ -44,3 +44,5 @@ export default function ChooseSizePage() {
     </>
   );
 }
+
+export default ChooseSizePage;

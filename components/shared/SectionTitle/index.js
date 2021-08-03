@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import Layout from "elements/shared/Layout";
 
 const SectionTitle = styled(Layout.PaddedContainer)`

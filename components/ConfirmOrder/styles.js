@@ -50,10 +50,13 @@ const Plate = styled.div`
 
 const OrderSummary = styled(Card)`
   position: absolute;
-  width: 270px;
-  top: 0;
-  transform: translate(-10px, 250px);
-  padding-bottom: 30px;
+  top: 246px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 270px;
+  margin: 0 auto;
+  transform: translateX(-60px);
 `;
 
 const ContentContainer = styled.div`

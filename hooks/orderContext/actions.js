@@ -1,10 +1,12 @@
 import { UPDATE_SIZE, UPDATE_CRUST, UPDATE_TOPPINGS } from "./actionTypes";
 
-export const updatePizzaSize = (dispatch, payload) =>
+const updatePizzaSize = (dispatch, payload) =>
   dispatch({ type: UPDATE_SIZE, payload: { ...payload, key: "size" } });
 
-export const updatePizzaCrust = (dispatch, payload) =>
+const updatePizzaCrust = (dispatch, payload) =>
   dispatch({ type: UPDATE_CRUST, payload: { ...payload, key: "crust" } });
 
-export const updatePizzaToppings = (dispatch, toppings) =>
+const updatePizzaToppings = (dispatch, toppings) =>
   dispatch({ type: UPDATE_TOPPINGS, payload: { toppings, key: "toppings" } });
+
+export { updatePizzaSize, updatePizzaCrust, updatePizzaToppings };

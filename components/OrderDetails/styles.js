@@ -19,7 +19,8 @@ const Container = styled.div`
   position: absolute;
   right: 0;
   left: 0;
-  top: 15%;
+  top: 115px;
+
   & > :first-child {
     margin-bottom: 30px;
   }

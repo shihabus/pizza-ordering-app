@@ -1,12 +1,12 @@
 import { isEmptyObject } from "Utils/helperUtils";
 
-export const getPizzaSizeSelector = (state) => state.size;
-export const getPizzaImageScaleSelector = (state) => state.size?.scale || 1;
-export const getPizzaCrustSelector = (state) => state.crust;
-export const getPizzaToppingSelector = (state) => state.toppings;
-export const getOrderTotalSelector = (state) => state.orderTotal;
+const getPizzaSizeSelector = (state) => state.size;
+const getPizzaImageScaleSelector = (state) => state.size?.scale || 1;
+const getPizzaCrustSelector = (state) => state.crust;
+const getPizzaToppingSelector = (state) => state.toppings;
+const getOrderTotalSelector = (state) => state.orderTotal;
 
-export const getOrderSummarySelector = (state) => {
+const getOrderSummarySelector = (state) => {
   let summary = [];
   const size = getPizzaSizeSelector(state);
   if (!isEmptyObject(size)) {
@@ -26,4 +26,13 @@ export const getOrderSummarySelector = (state) => {
   }));
   summary = [...summary, ...toppingInfo];
   return summary;
+};
+
+export {
+  getPizzaSizeSelector,
+  getPizzaImageScaleSelector,
+  getPizzaCrustSelector,
+  getPizzaToppingSelector,
+  getOrderTotalSelector,
+  getOrderSummarySelector,
 };

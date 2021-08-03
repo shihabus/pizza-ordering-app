@@ -2,19 +2,20 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import pizzaCrustInfo from "data/pizzaCrustInfo.json";
-import PageTitle from "components/shared/PageTitle";
-import NavBar from "components/shared/NavBar";
-import Layout from "elements/shared/Layout";
-import BottomBar from "elements/shared/BottomBar";
-import { FullWidth } from "elements/shared/Button";
-import GradientBg from "elements/shared/GradientBg";
-import ChooseCrust from "components/ChooseCrust";
 import { updatePizzaCrust } from "hooks/orderContext/actions";
 import { useOrderContext } from "hooks/orderContext";
 import { getPizzaCrustSelector } from "hooks/orderContext/selectors";
 import { routeConstants } from "constants/routeConstants";
 
-export default function ChooseCrustPage() {
+import PageTitle from "components/shared/PageTitle";
+import NavBar from "components/shared/NavBar";
+import ChooseCrust from "components/ChooseCrust";
+import Layout from "elements/shared/Layout";
+import BottomBar from "elements/shared/BottomBar";
+import { FullWidth } from "elements/shared/Button";
+import GradientBg from "elements/shared/GradientBg";
+
+function ChooseCrustPage() {
   const router = useRouter();
 
   const [state, dispatch] = useOrderContext();
@@ -41,3 +42,5 @@ export default function ChooseCrustPage() {
     </>
   );
 }
+
+export default ChooseCrustPage;

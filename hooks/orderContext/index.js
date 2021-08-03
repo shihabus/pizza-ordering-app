@@ -4,7 +4,6 @@ import { UPDATE_SIZE, UPDATE_CRUST, UPDATE_TOPPINGS } from "./actionTypes";
 
 const OrderContext = React.createContext();
 
-// add initialState
 const initialState = {
   size: {},
   crust: {},
@@ -23,7 +22,9 @@ function calculateOrderTotal(state = {}, key = "", price = 0) {
 // subtract old toppings cost and add the new one
 function calculateToppingsPrice(currentState, newToppings) {
   const currentTotal = currentState.orderTotal;
+
   const toppingPriceReducer = (acc, topping) => acc + topping?.price;
+
   const newToppingPrice = newToppings?.reduce(toppingPriceReducer, 0);
 
   const oldToppingPrice = currentState.toppings?.reduce(toppingPriceReducer, 0);

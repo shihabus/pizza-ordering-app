@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 
-import PizzaRenderer from "components/shared/PizzaRenderer";
 import { getPizzaImageScaleSelector } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
+
+import PizzaRenderer from "components/shared/PizzaRenderer";
 
 function RenderPizzaCrust({ pizzaInfo }) {
   const [state] = useOrderContext();
