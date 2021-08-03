@@ -1,18 +1,20 @@
-import GradientBg from "elements/shared/GradientBg";
-import React from "react";
-import NavBar from "/components/shared/NavBar";
-import PageTitle from "/components/shared/PageTitle";
-import { FullWidth } from "/elements/shared/Button";
-import Layout from "/elements/shared/Layout";
-import BottomBar from "elements/shared/BottomBar";
-import ConfirmOrder from "components/ConfirmOrder";
-import { useOrderContext } from "/hooks/orderContext";
+import { useRouter } from "next/router";
+
+import { routeConstants } from "constants/routeConstants";
+import { useOrderContext } from "hooks/orderContext";
 import {
   getOrderSummarySelector,
   getOrderTotalSelector,
 } from "hooks/orderContext/selectors";
-import { useRouter } from "next/router";
-import { routeConstants } from "constants/routeConstants";
+
+import GradientBg from "elements/shared/GradientBg";
+import { FullWidth } from "elements/shared/Button";
+import Layout from "elements/shared/Layout";
+import BottomBar from "elements/shared/BottomBar";
+
+import NavBar from "components/shared/NavBar";
+import PageTitle from "components/shared/PageTitle";
+import ConfirmOrder from "components/ConfirmOrder";
 
 export default function ConfirmOrderPage() {
   const [state] = useOrderContext();
@@ -21,7 +23,7 @@ export default function ConfirmOrderPage() {
 
   const router = useRouter();
 
-  function onClickHandler() {
+  function clickHandler() {
     router.push(routeConstants.orderCheckout);
   }
   return (
@@ -34,7 +36,7 @@ export default function ConfirmOrderPage() {
           <ConfirmOrder orderSummary={orderSummary} orderTotal={orderTotal} />
         </Layout.Content>
         <BottomBar>
-          <FullWidth onClick={onClickHandler}>Confirm Order</FullWidth>
+          <FullWidth onClick={clickHandler}>Confirm Order</FullWidth>
         </BottomBar>
       </Layout.FullPage>
     </>

@@ -22,12 +22,10 @@ export default function ChooseToppingPage() {
   const toppingSelection = getPizzaToppingSelector(state);
 
   const [toppings, setToppings] = useState([
-    ...toppingSelection?.map((topping) => {
-      return topping?.value;
-    }),
+    ...toppingSelection?.map((topping) => topping?.value),
   ]);
 
-  function onClickHandler() {
+  function clickHandler() {
     const selectedToppings = toppings.map(
       (topping) => pizzaToppingInfo[topping]
     );
@@ -45,7 +43,7 @@ export default function ChooseToppingPage() {
           <ChooseTopping toppings={toppings} setToppings={setToppings} />
         </Layout.Content>
         <BottomBar>
-          <FullWidth onClick={onClickHandler}>Next</FullWidth>
+          <FullWidth onClick={clickHandler}>Next</FullWidth>
         </BottomBar>
       </Layout.FullPage>
     </>

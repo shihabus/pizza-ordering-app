@@ -1,4 +1,3 @@
-import React from "react";
 import { useRouter } from "next/router";
 
 import { routeConstants } from "constants/routeConstants";
@@ -14,6 +13,7 @@ import { FullWidth } from "/elements/shared/Button";
 
 export default function CheckoutPage() {
   const router = useRouter();
+
   function clickHandler() {
     router.push(routeConstants.orderDetails);
   }

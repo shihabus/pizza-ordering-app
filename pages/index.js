@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+import { useOrderContext } from "hooks/orderContext";
+import { getPizzaSizeSelector } from "hooks/orderContext/selectors";
+import { updatePizzaSize } from "hooks/orderContext/actions";
+import pizzaSizeInfo from "data/pizzaSizeInfo.json";
+import { routeConstants } from "constants/routeConstants";
+
 import PageTitle from "components/shared/PageTitle";
 import NavBar from "components/shared/NavBar";
 import ChooseSize from "components/ChooseSize";
 
-import { useOrderContext } from "hooks/orderContext";
-
-import pizzaSizeInfo from "data/pizzaSizeInfo.json";
 import Layout from "elements/shared/Layout";
 import BottomBar from "elements/shared/BottomBar";
 import { FullWidth } from "elements/shared/Button";
 import GradientBg from "elements/shared/GradientBg";
-import { updatePizzaSize } from "hooks/orderContext/actions";
-import { getPizzaSizeSelector } from "hooks/orderContext/selectors";
-import { routeConstants } from "constants/routeConstants";
 
 export default function ChooseSizePage() {
   const [state, dispatch] = useOrderContext();

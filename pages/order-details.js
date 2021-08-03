@@ -1,8 +1,9 @@
 import GradientBg from "elements/shared/GradientBg";
-import OrderDetails from "/components/OrderDetails";
-import NavBar from "/components/shared/NavBar";
-import PageTitle from "/components/shared/PageTitle";
-import Layout from "/elements/shared/Layout";
+import Layout from "elements/shared/Layout";
+
+import OrderDetails from "components/OrderDetails";
+import NavBar from "components/shared/NavBar";
+import PageTitle from "components/shared/PageTitle";
 
 export default function OrderDetailsPage() {
   return (

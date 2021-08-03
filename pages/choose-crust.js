@@ -15,11 +15,11 @@ import { getPizzaCrustSelector } from "hooks/orderContext/selectors";
 import { routeConstants } from "constants/routeConstants";
 
 export default function ChooseCrustPage() {
+  const router = useRouter();
+
   const [state, dispatch] = useOrderContext();
   const currentCrust = getPizzaCrustSelector(state);
   const [crust, setCrust] = useState(currentCrust?.label || "thin");
-
-  const router = useRouter();
 
   function clickHandler() {
     updatePizzaCrust(dispatch, pizzaCrustInfo[crust]);
