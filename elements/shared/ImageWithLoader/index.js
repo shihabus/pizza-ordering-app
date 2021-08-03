@@ -1,32 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { inlineStyles, shimmer } from "Utils/stylesUtil";
+import { useRef, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-const StyledImage = styled.img`
-  ${inlineStyles}
-`;
-
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ShimmerPlaceholder = styled.div`
-  position: absolute;
-  ${shimmer};
-  ${inlineStyles};
-`;
+import { StyledImage, Container, ShimmerPlaceholder } from "./styles";
 
 function ImageWithLoader(props) {
-  const imgRef = React.useRef(null);
-  const [isLoaded, setIsLoaded] = React.useState(false);
-
   const { width, height, style: styleProps, className } = props;
 
-  React.useEffect(() => {
+  const imgRef = useRef(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
     if (!isLoaded && imgRef?.current?.complete) {
       setIsLoaded(true);
     }
@@ -58,3 +41,17 @@ function ImageWithLoader(props) {
 }
 
 export default ImageWithLoader;
+
+ImageWithLoader.propTypes = {
+  width: PropTypes.string,
+  height: PropTypes.string,
+  style: PropTypes.object,
+  className: PropTypes.string,
+};
+
+ImageWithLoader.defaultProps = {
+  width: "",
+  height: "",
+  style: {},
+  className: "",
+};

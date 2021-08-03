@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Label, Input, Slider } from "./styles";
 
 function Toggle({ name, ...rest }) {
@@ -10,3 +12,7 @@ function Toggle({ name, ...rest }) {
 }
 
 export default Toggle;
+
+Toggle.propTypes = {
+  name: PropTypes.string.isRequired,
+};

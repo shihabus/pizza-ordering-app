@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 import { routeConstants } from "constants/routeConstants";
 import HomeIcon from "elements/shared/Icons/HomeIcon";
@@ -46,3 +47,18 @@ function AppBar({ title, showHome, showBack, left, right }) {
 }
 
 export default AppBar;
+
+AppBar.propTypes = {
+  title: PropTypes.string.isRequired,
+  showHome: PropTypes.bool,
+  showBack: PropTypes.bool,
+  left: PropTypes.node,
+  right: PropTypes.node,
+};
+
+AppBar.defaultProps = {
+  showHome: false,
+  showBack: false,
+  left: <></>,
+  right: <></>,
+};

@@ -19,7 +19,13 @@ const UnChecked = (props) => (
 function Checkbox({ onClickHandler, checked, name, disabled, ...rest }) {
   return (
     <Label htmlFor={name} onClick={onClickHandler}>
-      <Input id={name} type="checkbox" checked={checked} disabled={disabled} />
+      <Input
+        id={name}
+        type="checkbox"
+        checked={checked}
+        disabled={disabled}
+        onChange={onClickHandler}
+      />
       <CheckedIcon {...rest} />
       <UnChecked {...rest} />
     </Label>
@@ -29,8 +35,10 @@ function Checkbox({ onClickHandler, checked, name, disabled, ...rest }) {
 export default Checkbox;
 
 Checkbox.propTypes = {
-  onClickHandler: PropTypes.func,
   name: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  onClickHandler: PropTypes.func,
 };
 
 Checkbox.defaultProps = {

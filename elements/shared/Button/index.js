@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { ButtonText } from "elements/shared/TextStyles";
 
 import {
@@ -15,6 +17,15 @@ function FullWidth({ children, ...props }) {
   );
 }
 
+FullWidth.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+};
+
+FullWidth.defaultProps = {
+  onClick: () => {},
+};
+
 function RoundedButton({ children, isActive, ...props }) {
   const Label = isActive ? ButtonLabel : ButtonText.Default;
   return (
@@ -25,3 +36,14 @@ function RoundedButton({ children, isActive, ...props }) {
 }
 
 export { BaseButton, FullWidth, RoundedButton };
+
+RoundedButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func,
+};
+
+RoundedButton.defaultProps = {
+  isActive: false,
+  onClick: () => {},
+};

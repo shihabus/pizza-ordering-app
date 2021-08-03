@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import { Constants, inlineStyles } from "Utils/stylesUtil";
 
@@ -37,6 +38,14 @@ const PaddedContainer = styled.div`
 const Content = ({ showBottomBar, ...props }) => (
   <ContentContainer showBottomBar={showBottomBar} {...props} />
 );
+
+Content.propTypes = {
+  showBottomBar: PropTypes.bool,
+};
+
+Content.defaultProps = {
+  showBottomBar: false,
+};
 
 const Layout = {
   FullPage,
