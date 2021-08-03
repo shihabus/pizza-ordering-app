@@ -11,8 +11,6 @@ const GradientBg = styled.div`
   ${inlineStyles}
 `;
 
-export default GradientBg;
-
 GradientBg.propTypes = {
   height: PropTypes.string,
 };
@@ -20,3 +18,5 @@ GradientBg.propTypes = {
 GradientBg.defaultProps = {
   height: "280px",
 };
+
+export default GradientBg;

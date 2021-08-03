@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import pizzaToppingInfo from "data/pizzaToppingsInfo.json";
 import { getPizzaImageScaleSelector } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
@@ -15,5 +17,9 @@ function RenderPizzaTopping({ toppings }) {
 
   return <PizzaRenderer scale={scale} image={image} />;
 }
+
+RenderPizzaTopping.propTypes = {
+  toppings: PropTypes.array.isRequired,
+};
 
 export default RenderPizzaTopping;

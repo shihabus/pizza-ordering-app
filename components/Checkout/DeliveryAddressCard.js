@@ -43,7 +43,7 @@ const Footer = () => (
       <BoldText>Contactless Delivery:</BoldText>
       <BodyText>Rider will place order at your door</BodyText>
     </div>
-    <Toggle width="38px" height="20px" />
+    <Toggle name="contact-less delivery" width="38px" height="20px" />
   </ContactLessDeliveryContainer>
 );
 

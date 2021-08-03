@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import PizzaRenderer from "components/shared/PizzaRenderer";
 
 function RenderPizzaSize({ pizzaInfo }) {
@@ -18,5 +20,9 @@ function RenderPizzaSize({ pizzaInfo }) {
     />
   );
 }
+
+RenderPizzaSize.propTypes = {
+  pizzaInfo: PropTypes.object.isRequired,
+};
 
 export default RenderPizzaSize;

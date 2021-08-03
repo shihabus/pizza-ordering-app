@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import PizzaRenderer from "components/shared/PizzaRenderer";
 import { getPizzaImageScaleSelector } from "hooks/orderContext/selectors";
 import { useOrderContext } from "hooks/orderContext";
@@ -24,5 +26,9 @@ function RenderPizzaCrust({ pizzaInfo }) {
     />
   );
 }
+
+RenderPizzaCrust.propTypes = {
+  pizzaInfo: PropTypes.object.isRequired,
+};
 
 export default RenderPizzaCrust;

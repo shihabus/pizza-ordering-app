@@ -40,11 +40,11 @@ function ButtonGroup({ title, children, onChange, selection, ...props }) {
 
 ButtonGroup.Item = RoundedButton;
 
-export default ButtonGroup;
-
 ButtonGroup.propTypes = {
   title: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
   onChange: PropTypes.func.isRequired,
   selection: PropTypes.any.isRequired,
 };
+
+export default ButtonGroup;

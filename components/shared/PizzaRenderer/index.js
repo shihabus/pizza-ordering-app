@@ -14,7 +14,12 @@ function RenderPizza({ scale, image, showRing, label }) {
   return (
     <BlurredBorder scale={scale}>
       <Plate>
-        <PizzaImage src={image} width="216px" height="216px" alt="pizza image" />
+        <PizzaImage
+          src={image}
+          width="216px"
+          height="216px"
+          alt="pizza image"
+        />
       </Plate>
       {showRing && (
         <Ring>
@@ -43,17 +48,17 @@ function Pizza(props) {
   );
 }
 
-export default Pizza;
-
 Pizza.propTypes = {
   image: PropTypes.string.isRequired,
   showRing: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.node,
   scale: PropTypes.number,
 };
 
 Pizza.defaultProps = {
   showRing: false,
-  label: "",
+  label: <></>,
   scale: 1,
 };
+
+export default Pizza;

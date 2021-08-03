@@ -40,8 +40,6 @@ function ImageWithLoader(props) {
   );
 }
 
-export default ImageWithLoader;
-
 ImageWithLoader.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
@@ -55,3 +53,5 @@ ImageWithLoader.defaultProps = {
   style: {},
   className: "",
 };
+
+export default ImageWithLoader;

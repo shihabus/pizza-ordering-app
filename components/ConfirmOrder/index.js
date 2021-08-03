@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { toPriceLabel } from "Utils/helperUtils";
 
 import SectionTitle from "components/shared/SectionTitle";
@@ -49,7 +51,7 @@ function CartItemSummary({ orderSummary }) {
   return (
     <ItemsContainer>
       {orderSummary.map((orderItem) => (
-        <LineItems key={orderItem}>
+        <LineItems key={orderItem.label}>
           <OrderItemLabel>{orderItem.label}</OrderItemLabel>
           <OrderItemPrice>{toPriceLabel(orderItem.cost)}</OrderItemPrice>
         </LineItems>
@@ -86,5 +88,10 @@ function ConfirmOrder({ orderTotal, orderSummary }) {
     </>
   );
 }
+
+ConfirmOrder.propTypes = {
+  orderTotal: PropTypes.number.isRequired,
+  orderSummary: PropTypes.array.isRequired,
+};
 
 export default ConfirmOrder;

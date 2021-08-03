@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Layout from "elements/shared/Layout";
 
@@ -39,5 +40,16 @@ function Slider({ header, selection, changeHandler, children, ...rest }) {
     </Container>
   );
 }
+
+Slider.propTypes = {
+  header: PropTypes.node.isRequired,
+  selection: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
+  changeHandler: PropTypes.func,
+};
+
+Slider.defaultProps = {
+  changeHandler: () => {},
+};
 
 export default Slider;

@@ -11,8 +11,8 @@ function Toggle({ name, ...rest }) {
   );
 }
 
-export default Toggle;
-
 Toggle.propTypes = {
   name: PropTypes.string.isRequired,
 };
+
+export default Toggle;

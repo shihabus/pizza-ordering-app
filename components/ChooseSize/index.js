@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import PropTypes from "prop-types";
 
 import pizzaSizeInfo from "data/pizzaSizeInfo.json";
 
@@ -25,6 +26,10 @@ function CustomizationTitle({ pizzaInfo }) {
   ];
   return <CustomizationInfo total={total + price} breadCrumb={breadCrumb} />;
 }
+
+CustomizationTitle.propTypes = {
+  pizzaInfo: PropTypes.object.isRequired,
+};
 
 function ChooseSize({ size, setSize }) {
   function onChangeHandler(option) {
@@ -53,5 +58,10 @@ function ChooseSize({ size, setSize }) {
     </>
   );
 }
+
+ChooseSize.propTypes = {
+  size: PropTypes.string.isRequired,
+  setSize: PropTypes.func.isRequired,
+};
 
 export default ChooseSize;

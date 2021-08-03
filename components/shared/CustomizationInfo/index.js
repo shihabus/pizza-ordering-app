@@ -22,8 +22,6 @@ function CustomizationInfo(props) {
   );
 }
 
-export default CustomizationInfo;
-
 CustomizationInfo.propTypes = {
   title: PropTypes.string,
   total: PropTypes.number.isRequired,
@@ -33,3 +31,5 @@ CustomizationInfo.propTypes = {
 CustomizationInfo.defaultProps = {
   title: "Create Your Pizza",
 };
+
+export default CustomizationInfo;

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import ImageWithLoader from "elements/shared/ImageWithLoader";
 
 import {
@@ -30,5 +32,15 @@ function ToppingCard({ isSelected, topping, disabled, ...rest }) {
     </Card>
   );
 }
+
+ToppingCard.propTypes = {
+  isSelected: PropTypes.bool,
+  topping: PropTypes.object.isRequired,
+  disabled: PropTypes.bool.isRequired,
+};
+
+ToppingCard.defaultProps = {
+  isSelected: false,
+};
 
 export default ToppingCard;

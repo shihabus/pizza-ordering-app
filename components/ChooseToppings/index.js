@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import pizzaToppingInfo from "data/pizzaToppingsInfo.json";
 import { useOrderContext } from "hooks/orderContext";
 import {
@@ -96,5 +98,10 @@ function ChooseTopping({ toppings, setToppings }) {
     </>
   );
 }
+
+ChooseTopping.propTypes = {
+  toppings: PropTypes.array.isRequired,
+  setToppings: PropTypes.func.isRequired,
+};
 
 export default ChooseTopping;

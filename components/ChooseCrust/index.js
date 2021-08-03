@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import PropTypes from "prop-types";
 
 import {
   getOrderTotalSelector,
@@ -40,6 +41,10 @@ function CustomizationTitle({ pizzaInfo }) {
   );
 }
 
+CustomizationTitle.propTypes = {
+  pizzaInfo: PropTypes.object.isRequired,
+};
+
 function ChooseCrust({ crust, setCrust }) {
   function onChangeHandler(selectedCrust) {
     setCrust(selectedCrust);
@@ -67,5 +72,10 @@ function ChooseCrust({ crust, setCrust }) {
     </>
   );
 }
+
+ChooseCrust.propTypes = {
+  crust: PropTypes.string.isRequired,
+  setCrust: PropTypes.func.isRequired,
+};
 
 export default ChooseCrust;

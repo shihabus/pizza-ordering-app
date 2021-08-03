@@ -46,8 +46,6 @@ function AppBar({ title, showHome, showBack, left, right }) {
   );
 }
 
-export default AppBar;
-
 AppBar.propTypes = {
   title: PropTypes.string.isRequired,
   showHome: PropTypes.bool,
@@ -62,3 +60,5 @@ AppBar.defaultProps = {
   left: <></>,
   right: <></>,
 };
+
+export default AppBar;

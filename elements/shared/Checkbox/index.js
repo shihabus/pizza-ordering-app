@@ -32,8 +32,6 @@ function Checkbox({ onClickHandler, checked, name, disabled, ...rest }) {
   );
 }
 
-export default Checkbox;
-
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
@@ -44,3 +42,5 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   onClickHandler: () => {},
 };
+
+export default Checkbox;

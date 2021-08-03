@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {
   Wrapper,
@@ -18,6 +19,12 @@ const TimeLine = ({ children, currentActiveStep, ...props }) => (
     })}
   </Wrapper>
 );
+
+TimeLine.propTypes = {
+  children: PropTypes.node.isRequired,
+  currentActiveStep: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
+};
 
 const TimelineItem = ({
   children,
@@ -44,13 +51,50 @@ const TimelineItem = ({
   );
 };
 
+TimelineItem.propTypes = {
+  children: PropTypes.node.isRequired,
+  currentActiveStep: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  totalSteps: PropTypes.number,
+  step: PropTypes.number,
+};
+
+TimelineItem.defaultProps = {
+  currentActiveStep: 0,
+  totalSteps: 0,
+  step: 0,
+};
+
 const TimelineDot = ({ children, isDone, isActive }) => {
   return <Dot>{children({ isDone, isActive })}</Dot>;
+};
+
+TimelineDot.propTypes = {
+  children: PropTypes.func,
+  isDone: PropTypes.bool,
+  isActive: PropTypes.bool,
+};
+
+TimelineDot.defaultProps = {
+  children: () => {},
+  isDone: false,
+  isActive: false,
 };
 
 const TextContainer = ({ children, isDone, isActive }) => (
   <TextContainerWrapper>{children({ isDone, isActive })}</TextContainerWrapper>
 );
+
+TextContainer.propTypes = {
+  children: PropTypes.func,
+  isDone: PropTypes.bool,
+  isActive: PropTypes.bool,
+};
+
+TextContainer.defaultProps = {
+  children: () => {},
+  isDone: false,
+  isActive: false,
+};
 
 TimeLine.Item = TimelineItem;
 TimeLine.Dot = TimelineDot;
