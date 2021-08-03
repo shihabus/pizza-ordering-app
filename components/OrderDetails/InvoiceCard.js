@@ -1,19 +1,24 @@
+import { useOrderContext } from "hooks/orderContext";
+import { getOrderTotalSelector } from "hooks/orderContext/selectors";
+import { toPriceLabel } from "Utils/helperUtils";
+
 import Layout from "elements/shared/Layout";
 import { Card, Section, Separator } from "elements/shared/Card";
 
 import OrderStatus from "./OrderStatus";
-
 import {
   InvoiceCardHeader,
   InvoiceCardBody,
   TitleText,
   ContentText,
+  DueValue,
 } from "./styles";
 
 const HeaderSection = () => {
+  const [state] = useOrderContext();
+  const total = getOrderTotalSelector(state);
   const data = "14 Feb";
   const invoiceId = "#15569b";
-  const total = "$14.50";
 
   return (
     <Section>
@@ -28,7 +33,7 @@ const HeaderSection = () => {
         </div>
         <div>
           <TitleText>total due</TitleText>
-          <ContentText>{total}</ContentText>
+          <DueValue>{toPriceLabel(total)}</DueValue>
         </div>
       </InvoiceCardHeader>
     </Section>

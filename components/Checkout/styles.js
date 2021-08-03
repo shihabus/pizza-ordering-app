@@ -64,6 +64,12 @@ const BoldText = styled.p`
   color: ${Colors.purple};
 `;
 
+const PriceValue = styled(BoldText)`
+  &::before {
+    content: "$ ";
+  }
+`;
+
 const BodyText = styled.p`
   font-family: Roboto;
   font-style: normal;
@@ -118,6 +124,7 @@ export {
   ContactLessDeliveryContainer,
   LineItemContainer,
   BoldText,
+  PriceValue,
   BodyText,
   CardHeader,
   StyledLocationIcon,

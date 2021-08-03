@@ -41,6 +41,12 @@ const ContentText = styled(Header4)`
   color: ${Colors.red};
 `;
 
+const DueValue = styled(ContentText)`
+  &::before {
+    content: "$ ";
+  }
+`;
+
 const InvoiceCardBody = styled.div`
   padding-top: 26px;
   padding-bottom: 38px;
@@ -171,6 +177,7 @@ export {
   InvoiceCardHeader,
   TitleText,
   ContentText,
+  DueValue,
   InvoiceCardBody,
   DotContainer,
   StepText,
