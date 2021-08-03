@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Image from "next/image";
 
 import { Card } from "elements/shared/Card";
 import {
@@ -10,6 +9,7 @@ import {
 } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
 import CartIcon from "elements/shared/Icons/CartIcon";
+import ImageWithLoader from "elements/shared/Image";
 
 const BlurredBorder = styled.div`
   --blurred-border-width: 540px;
@@ -31,15 +31,20 @@ const BlurredBorder = styled.div`
   transform: translate(10%, -15%);
 `;
 
-const PizzaImage = styled(Image)`
+const PizzaImage = styled(ImageWithLoader)`
   border-radius: 50%;
+  width: 440px;
+  height: 440px;
 `;
 
 const Plate = styled.div`
   width: 480px;
   height: 480px;
   border-radius: 50%;
-  border: 26px solid white;
+  background-color: ${Colors.white};
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 4px 15px rgba(218, 218, 229, 0.2);
 `;
 

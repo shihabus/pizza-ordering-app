@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { useOrderContext } from "hooks/orderContext";
 import { getOrderTotalSelector } from "hooks/orderContext/selectors";
 import { toPriceLabel } from "Utils/helperUtils";
@@ -39,7 +37,8 @@ const Header = () => (
 
 const CardInfo = () => (
   <VisaContainer>
-    <Image
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
       src="/assets/images/checkoutPage/visa.png"
       width="28"
       height="28"

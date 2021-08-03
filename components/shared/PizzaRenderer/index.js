@@ -14,7 +14,7 @@ function RenderPizza({ scale, image, showRing, label }) {
   return (
     <BlurredBorder scale={scale}>
       <Plate>
-        <PizzaImage src={image} width="216" height="216" alt="pizza image" />
+        <PizzaImage src={image} width="216px" height="216px" alt="pizza image" />
       </Plate>
       {showRing && (
         <Ring>

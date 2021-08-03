@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ImageWithLoader from "elements/shared/Image";
 
 import {
   Card,
@@ -13,7 +13,7 @@ function ToppingCard({ isSelected, topping, disabled, ...rest }) {
   const { label, showLabel, itemImage } = topping;
   return (
     <Card isSelected={isSelected} disabled={disabled} {...rest}>
-      <Image src={itemImage} alt={label} width="64" height="64" />
+      <ImageWithLoader src={itemImage} alt={label} width="64px" height="64px" />
       <CTAContainer>
         <Title>{label}</Title>
         <Price>{showLabel}</Price>

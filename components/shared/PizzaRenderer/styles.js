@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
-import Image from "next/image";
+
+import { inlineStyles } from "Utils/stylesUtil";
 
 import { PreTitle } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
+import ImageWithLoader from "elements/shared/Image";
 
 const transitionStyle = css`
   will-change: opacity;
@@ -114,8 +116,9 @@ const Plate = styled.div`
   align-items: center;
 `;
 
-const PizzaImage = styled(Image)`
+const PizzaImage = styled(ImageWithLoader)`
   border-radius: 50%;
+  ${inlineStyles};
 `;
 
 const Ring = styled.div`
