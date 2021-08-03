@@ -9,7 +9,7 @@ import {
 } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
 import CartIcon from "elements/shared/Icons/CartIcon";
-import ImageWithLoader from "elements/shared/Image";
+import ImageWithLoader from "elements/shared/ImageWithLoader";
 
 const BlurredBorder = styled.div`
   --blurred-border-width: 540px;

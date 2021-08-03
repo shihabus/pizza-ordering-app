@@ -4,7 +4,7 @@ import { inlineStyles } from "Utils/stylesUtil";
 
 import { PreTitle } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
-import ImageWithLoader from "elements/shared/Image";
+import ImageWithLoader from "elements/shared/ImageWithLoader";
 
 const transitionStyle = css`
   will-change: opacity;

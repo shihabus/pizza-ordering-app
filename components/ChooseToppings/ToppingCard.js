@@ -1,4 +1,4 @@
-import ImageWithLoader from "elements/shared/Image";
+import ImageWithLoader from "elements/shared/ImageWithLoader";
 
 import {
   Card,
