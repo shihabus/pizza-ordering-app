@@ -13,13 +13,14 @@ const initialState = {
 };
 
 // if customization already exist
-// decrease its price and add the new one
+// subtract its price and add the new one
 function calculateOrderTotal(state = {}, key = "", price = 0) {
   const currentTotal = state.orderTotal;
   const amountToDecrement = state[key]?.price || 0;
   return currentTotal + price - amountToDecrement;
 }
 
+// subtract old toppings cost and add the new one
 function calculateToppingsPrice(currentState, newToppings) {
   const currentTotal = currentState.orderTotal;
   const toppingPriceReducer = (acc, topping) => acc + topping?.price;
