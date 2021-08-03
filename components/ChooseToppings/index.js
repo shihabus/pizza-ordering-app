@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+import { MAX_TOPPINGS_COUNT } from "constants/appConstants";
 import pizzaToppingInfo from "data/pizzaToppingsInfo.json";
 import { useOrderContext } from "hooks/orderContext";
 import {
@@ -65,7 +66,7 @@ const SliderHeader = () => (
 );
 
 function ChooseTopping({ toppings, setToppings }) {
-  const canSelectMoreItems = toppings.length < 7;
+  const canSelectMoreItems = toppings.length <= MAX_TOPPINGS_COUNT;
 
   function onChangeHandler(value) {
     const updatedToppings = new Set([...toppings]);
