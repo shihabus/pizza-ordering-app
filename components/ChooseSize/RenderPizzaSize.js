@@ -5,7 +5,7 @@ function RenderPizzaSize({ pizzaInfo }) {
   const animationConfig = {
     key: scale,
     unmountOnExit: true,
-    timeout: 1000,
+    timeout: 400,
     classNames: "fade",
   };
   return (

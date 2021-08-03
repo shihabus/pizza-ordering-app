@@ -5,7 +5,7 @@ import Colors from "elements/shared/Colors";
 
 const PositionedContainer = styled(Layout.PaddedContainer)`
   position: relative;
-  top: 230px;
+  top: 240px;
   padding-bottom: 40px;
 `;
 

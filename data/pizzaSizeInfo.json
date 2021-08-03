@@ -8,13 +8,13 @@
   "medium": {
     "price": 10.0,
     "showLabel": "12''",
-    "scale": 1.05,
+    "scale": 1.075,
     "label": "medium"
   },
   "large": {
     "price": 12.0,
     "showLabel": "14''",
-    "scale": 1.1,
+    "scale": 1.15,
     "label": "large"
   },
   "sizes": ["small", "medium", "large"]

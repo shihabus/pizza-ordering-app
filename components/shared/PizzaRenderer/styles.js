@@ -4,13 +4,25 @@ import { PreTitle } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
 
 const transitionStyle = css`
+  will-change: opacity;
+  &.fade-appear {
+    opacity: 0;
+  }
+  &.fade-appear-active {
+    opacity: 1;
+    transition: opacity 50ms ease-in;
+  }
+  &.fade-appear-done {
+    opacity: 1;
+  }
+
   &.fade-enter {
     opacity: 0;
     z-index: 1;
   }
   &.fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 100ms linear 100ms;
+    transition: opacity 50ms linear;
   }
 
   /* exit */
@@ -19,7 +31,7 @@ const transitionStyle = css`
   }
   &.fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 1000ms linear;
+    transition: opacity 150ms linear;
   }
   &.fade-exit-done {
     opacity: 0;
@@ -27,13 +39,25 @@ const transitionStyle = css`
 `;
 
 const imageTransitionStyle = css`
+  will-change: opacity;
+  &.image-fade-appear {
+    opacity: 0;
+  }
+  &.image-fade-appear-active {
+    opacity: 1;
+    transition: opacity 50ms linear;
+  }
+  &.image-fade-appear-done {
+    opacity: 1;
+  }
+
   &.image-fade-enter {
     opacity: 0;
     z-index: 1;
   }
   &.image-fade-enter.image-fade-enter-active {
     opacity: 1;
-    transition: opacity 100ms linear 100ms;
+    transition: opacity 50ms linear;
   }
 
   /* exit */
@@ -42,7 +66,7 @@ const imageTransitionStyle = css`
   }
   &.image-fade-exit.image-fade-exit-active {
     opacity: 0;
-    transition: opacity 200ms linear;
+    transition: opacity 100ms linear;
   }
   &.image-fade-exit-done {
     opacity: 0;
@@ -74,6 +98,7 @@ const BlurredBorder = styled.div`
   transform: translateY(-50%) scale(var(--scale-ratio));
 
   ${transitionStyle};
+  ${imageTransitionStyle};
 `;
 
 const Plate = styled.div`
@@ -90,7 +115,8 @@ const Plate = styled.div`
 
 const PizzaImage = styled.img`
   border-radius: 50%;
-  ${imageTransitionStyle};
+  filter: drop-shadow(0px 20px 50px rgba(255, 126, 32, 0.2))
+    drop-shadow(0px 4px 8px rgba(109, 110, 156, 0.4));
 `;
 
 const Ring = styled.div`

@@ -10,29 +10,34 @@ import {
   LabelText,
 } from "./styles";
 
+function RenderPizza({ scale, image, showRing, label }) {
+  return (
+    <BlurredBorder scale={scale}>
+      <Plate>
+        <PizzaImage src={image} width="216" height="216" alt="pizza image" />
+      </Plate>
+      {showRing && (
+        <Ring>
+          <PizzaLabel>
+            <LabelText>{label}</LabelText>
+          </PizzaLabel>
+        </Ring>
+      )}
+    </BlurredBorder>
+  );
+}
+
 function Pizza(props) {
-  const { image, showRing, label, scale, animationConfig } = props;
+  const { animationConfig, ...rest } = props;
+
+  if (!animationConfig) {
+    return <RenderPizza {...rest} />;
+  }
 
   return (
     <TransitionGroup appear={true}>
       <CSSTransition {...animationConfig}>
-        <BlurredBorder scale={scale}>
-          <Plate>
-            <PizzaImage
-              src={image}
-              width="216"
-              height="216"
-              alt="pizza image"
-            />
-          </Plate>
-          {showRing && (
-            <Ring>
-              <PizzaLabel>
-                <LabelText>{label}</LabelText>
-              </PizzaLabel>
-            </Ring>
-          )}
-        </BlurredBorder>
+        <RenderPizza {...rest} />
       </CSSTransition>
     </TransitionGroup>
   );
@@ -45,7 +50,6 @@ Pizza.propTypes = {
   showRing: PropTypes.bool,
   label: PropTypes.string,
   scale: PropTypes.number,
-  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
 Pizza.defaultProps = {
