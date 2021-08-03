@@ -12,7 +12,7 @@ import {
 function ToppingCard({ isSelected, topping, disabled, ...rest }) {
   const { label, showLabel, itemImage } = topping;
   return (
-    <Card {...rest} isSelected={isSelected}>
+    <Card isSelected={isSelected} disabled={disabled} {...rest}>
       <Image src={itemImage} alt={label} width="64" height="64" />
       <CTAContainer>
         <Title>{label}</Title>
@@ -22,6 +22,8 @@ function ToppingCard({ isSelected, topping, disabled, ...rest }) {
             name={label}
             checked={isSelected}
             disabled={disabled}
+            onChange={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           />
         </CTA>
       </CTAContainer>

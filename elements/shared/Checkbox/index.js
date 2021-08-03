@@ -16,10 +16,10 @@ const UnChecked = (props) => (
   </UnCheckedStyle>
 );
 
-function Checkbox({ onClickHandler, checked, name, ...rest }) {
+function Checkbox({ onClickHandler, checked, name, disabled, ...rest }) {
   return (
     <Label htmlFor={name} onClick={onClickHandler}>
-      <Input id={name} type="checkbox" checked={checked} />
+      <Input id={name} type="checkbox" checked={checked} disabled={disabled} />
       <CheckedIcon {...rest} />
       <UnChecked {...rest} />
     </Label>

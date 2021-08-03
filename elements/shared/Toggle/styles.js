@@ -28,7 +28,6 @@ const Slider = styled.span`
   left: 0;
   bottom: 0;
   right: 0;
-  transition: 0.5s;
 
   background-color: ${Colors.lightGray};
   box-shadow: inset 0px 1.05px 4.2px rgba(160, 168, 204, 0.4);
@@ -36,11 +35,14 @@ const Slider = styled.span`
   padding: var(--border);
 
   border-radius: 35px;
+  will-change: background-color;
+
+  transition: 50ms background-color;
 
   &::before {
     position: absolute;
     content: "";
-    transition: 0.5s;
+    transition: 50ms transform, 50ms background-color;
 
     width: var(--dot-dia);
     height: var(--dot-dia);
@@ -56,7 +58,7 @@ const Slider = styled.span`
       rgba(255, 163, 96, 0.4) 94.08%
     );
     box-shadow: inset 0px 2px 8px rgba(245, 49, 63, 0.2);
-    transition: 0.5s all;
+    transition: 50ms background;
   }
 
   ${Input}:checked ~ & {
@@ -64,7 +66,7 @@ const Slider = styled.span`
       background: ${Gradients.red};
       box-shadow: 0px 5px 10px rgba(245, 49, 63, 0.4);
 
-      transition: 0.5s all;
+      transition: 50ms transform;
       transform: translateX(var(--translate-by));
     }
   }

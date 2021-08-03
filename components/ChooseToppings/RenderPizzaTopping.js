@@ -10,7 +10,7 @@ function RenderPizzaTopping({ toppings }) {
 
   const [state] = useOrderContext();
   const scale = getPizzaImageScaleSelector(state);
-  const { image = "/assets/images/pizzaPlain.png" } =
+  const { image = "/assets/images/chooseToppings/pizzaPlain.png" } =
     pizzaToppingInfo?.[lastItem] || {};
 
   return <PizzaRenderer scale={scale} image={image} />;

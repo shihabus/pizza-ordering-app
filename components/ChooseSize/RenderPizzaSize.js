@@ -13,7 +13,7 @@ function RenderPizzaSize({ pizzaInfo }) {
       showRing
       label={showLabel}
       scale={scale}
-      image="/assets/images/pizzaSizePlaceholder.png"
+      image="/assets/images/chooseSize/pizzaPlaceholder.png"
       animationConfig={animationConfig}
     />
   );

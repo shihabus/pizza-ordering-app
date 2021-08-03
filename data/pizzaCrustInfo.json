@@ -5,14 +5,14 @@
     "showLabel": "+$ 2.00",
     "scale": 1,
     "label": "thin",
-    "image": "/assets/images/pizzaThinCrust.png"
+    "image": "/assets/images/chooseCrust/pizzaThinCrust.png"
   },
   "thick": {
     "price": 4.0,
     "showLabel": "+$ 4.00",
     "scale": 1,
     "label": "thick",
-    "image": "/assets/images/pizzaThickCrust.png"
+    "image": "/assets/images/chooseCrust/pizzaThickCrust.png"
   },
   "crusts": ["thin", "thick"]
 }

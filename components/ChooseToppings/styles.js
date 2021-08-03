@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { PreTitle } from "elements/shared/TextStyles";
 import Slider from "elements/ChooseToppings/Slider";
@@ -22,7 +22,7 @@ const SubTitle = styled(PreTitle)`
 `;
 
 const StyledSlider = styled(Slider)`
-  top: 180px;
+  top: 190px;
 `;
 
 // Topping Card
@@ -39,6 +39,12 @@ const Card = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      background-color: #e1e3ea99;
+    `}
 
   & > :first-child {
     margin-right: 12px;

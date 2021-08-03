@@ -36,7 +36,7 @@ const Header = () => (
 const CardInfo = () => (
   <VisaContainer>
     <Image
-      src="/assets/images/visa.png"
+      src="/assets/images/checkoutPage/visa.png"
       width="28"
       height="28"
       alt="visa card icon"

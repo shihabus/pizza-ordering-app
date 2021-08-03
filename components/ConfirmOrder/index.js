@@ -62,7 +62,7 @@ function ConfirmOrder({ orderTotal, orderSummary }) {
     <>
       <Header />
       <BlurredBorder>
-        <PizzaImage src="/assets/images/pizzaWithToppings.png" />
+        <PizzaImage src="/assets/images/confirmOrder/pizza.png" />
       </BlurredBorder>
       <OrderSummary>
         <Section>

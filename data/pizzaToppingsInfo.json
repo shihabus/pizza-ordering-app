@@ -16,79 +16,79 @@
     "value": "pepperoni",
     "price": 1,
     "showLabel": "$ 1.00",
-    "itemImage": "/assets/images/pepperoni.png",
-    "image": "/assets/images/pizzaPepperoni.png"
+    "itemImage": "/assets/images/chooseToppings/pepperoni.png",
+    "image": "/assets/images/chooseToppings/pizzaPepperoni.png"
   },
   "mushrooms": {
     "label": "Mushrooms",
     "value": "mushrooms",
     "price": 1.1,
     "showLabel": "$ 1.10",
-    "itemImage": "/assets/images/mushroom.png",
-    "image": "/assets/images/pizzaMushroom.png"
+    "itemImage": "/assets/images/chooseToppings/mushroom.png",
+    "image": "/assets/images/chooseToppings/pizzaMushroom.png"
   },
   "black_olives": {
     "label": "Black Olives",
     "value": "black_olives",
     "price": 0,
     "showLabel": "$ 0.00",
-    "itemImage": "/assets/images/pepperoni.png",
-    "image": "/assets/images/pizzaBlackOlive.png"
+    "itemImage": "/assets/images/chooseToppings/pepperoni.png",
+    "image": "/assets/images/chooseToppings/pizzaBlackOlive.png"
   },
   "sausages": {
     "label": "Sausages",
     "value": "sausages",
     "price": 1.1,
     "showLabel": "$ 1.10",
-    "itemImage": "/assets/images/mushroom.png",
-    "image": "/assets/images/pizzaPepperoni.png"
+    "itemImage": "/assets/images/chooseToppings/mushroom.png",
+    "image": "/assets/images/chooseToppings/pizzaPepperoni.png"
   },
   "bacon": {
     "label": "Bacon",
     "value": "bacon",
     "price": 0,
     "showLabel": "$ 0.00",
-    "itemImage": "/assets/images/pepperoni.png",
-    "image": "/assets/images/pizzaMushroom.png"
+    "itemImage": "/assets/images/chooseToppings/pepperoni.png",
+    "image": "/assets/images/chooseToppings/pizzaMushroom.png"
   },
   "extra_cheese": {
     "label": "Extra Cheese",
     "value": "extra_cheese",
     "price": 0,
     "showLabel": "$ 0.00",
-    "itemImage": "/assets/images/mushroom.png",
-    "image": "/assets/images/pizzaBlackOlive.png"
+    "itemImage": "/assets/images/chooseToppings/mushroom.png",
+    "image": "/assets/images/chooseToppings/pizzaBlackOlive.png"
   },
   "green_peppers": {
     "label": "Green Peppers",
     "value": "green_peppers",
     "price": 0.5,
     "showLabel": "$ 0.50",
-    "itemImage": "/assets/images/pepperoni.png",
-    "image": "/assets/images/pizzaPepperoni.png"
+    "itemImage": "/assets/images/chooseToppings/pepperoni.png",
+    "image": "/assets/images/chooseToppings/pizzaPepperoni.png"
   },
   "pineapple": {
     "label": "Pineapple",
     "value": "pineapple",
     "price": 1,
     "showLabel": "$ 1.00",
-    "itemImage": "/assets/images/mushroom.png",
-    "image": "/assets/images/pizzaBlackOlive.png"
+    "itemImage": "/assets/images/chooseToppings/mushroom.png",
+    "image": "/assets/images/chooseToppings/pizzaBlackOlive.png"
   },
   "spinach": {
     "label": "Spinach",
     "value": "spinach",
     "price": 1.5,
     "showLabel": "$ 1.50",
-    "itemImage": "/assets/images/pepperoni.png",
-    "image": "/assets/images/pizzaMushroom.png"
+    "itemImage": "/assets/images/chooseToppings/pepperoni.png",
+    "image": "/assets/images/chooseToppings/pizzaMushroom.png"
   },
   "onions": {
     "label": "Onions",
     "value": "onions",
     "price": 0.5,
     "showLabel": "$ 0.50",
-    "itemImage": "/assets/images/mushroom.png",
-    "image": "/assets/images/pizzaOnion.png"
+    "itemImage": "/assets/images/chooseToppings/mushroom.png",
+    "image": "/assets/images/chooseToppings/pizzaOnion.png"
   }
 }
