@@ -1,1 +1,1 @@
-export const MAX_TOPPINGS_COUNT = 6;
+export const MAX_TOPPINGS_COUNT = 7;

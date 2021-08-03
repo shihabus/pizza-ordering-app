@@ -7,6 +7,9 @@ import { Header1, Header2, PreTitle } from "elements/shared/TextStyles";
 const TitleContainer = styled(Layout.PaddedContainer)`
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   padding-top: 20px;
 
   display: grid;

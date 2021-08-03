@@ -66,7 +66,7 @@ const SliderHeader = () => (
 );
 
 function ChooseTopping({ toppings, setToppings }) {
-  const canSelectMoreItems = toppings.length <= MAX_TOPPINGS_COUNT;
+  const canSelectMoreItems = toppings.length < MAX_TOPPINGS_COUNT;
 
   function onChangeHandler(value) {
     const updatedToppings = new Set([...toppings]);
