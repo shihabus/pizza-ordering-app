@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Image from "next/image";
 
 import { PreTitle } from "elements/shared/TextStyles";
 import Colors from "elements/shared/Colors";
@@ -113,10 +114,8 @@ const Plate = styled.div`
   align-items: center;
 `;
 
-const PizzaImage = styled.img`
+const PizzaImage = styled(Image)`
   border-radius: 50%;
-  filter: drop-shadow(0px 20px 50px rgba(255, 126, 32, 0.2))
-    drop-shadow(0px 4px 8px rgba(109, 110, 156, 0.4));
 `;
 
 const Ring = styled.div`

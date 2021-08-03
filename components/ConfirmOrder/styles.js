@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Image from "next/image";
 
 import { Card } from "elements/shared/Card";
 import {
@@ -30,10 +31,14 @@ const BlurredBorder = styled.div`
   transform: translate(10%, -15%);
 `;
 
-const PizzaImage = styled.img`
-  box-sizing: content-box;
+const PizzaImage = styled(Image)`
   border-radius: 50%;
-  width: 440px;
+`;
+
+const Plate = styled.div`
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
   border: 26px solid white;
   box-shadow: 0px 4px 15px rgba(218, 218, 229, 0.2);
 `;
@@ -105,6 +110,7 @@ const StyledCartIcon = styled(CartIcon)`
 export {
   BlurredBorder,
   PizzaImage,
+  Plate,
   OrderSummary,
   HeaderContainer,
   ItemsContainer,

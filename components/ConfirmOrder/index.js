@@ -9,6 +9,7 @@ import PizzaIcon from "elements/shared/Icons/PizzaIcon";
 import {
   BlurredBorder,
   PizzaImage,
+  Plate,
   OrderSummary,
   HeaderContainer,
   CardTitle,
@@ -62,7 +63,13 @@ function ConfirmOrder({ orderTotal, orderSummary }) {
     <>
       <Header />
       <BlurredBorder>
-        <PizzaImage src="/assets/images/confirmOrder/pizza.png" />
+        <Plate>
+          <PizzaImage
+            src="/assets/images/confirmOrder/pizza.png"
+            width="440"
+            height="440"
+          />
+        </Plate>
       </BlurredBorder>
       <OrderSummary>
         <Section>
