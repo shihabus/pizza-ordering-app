@@ -1,5 +1,9 @@
 ## Uncle John Pizzas App
 
+### Deployment
+
+Prod link: https://uncle-john-pizza-app.netlify.app/
+
 ### Local setup
 
 1.  Clone repository
