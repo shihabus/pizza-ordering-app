@@ -53,15 +53,14 @@ const OrderSummary = styled(Card)`
   top: 246px;
   bottom: 0;
   left: 0;
-  right: 0;
-  max-width: 270px;
+  width: 285px;
   margin: 0 auto;
-  transform: translateX(-60px);
+  transform: translateX(-20px);
 `;
 
 const ContentContainer = styled.div`
   padding: 18px 0px;
-  padding-left: 10px;
+  padding-left: 20px;
 `;
 
 const CardTitle = styled(PreTitle)`
