@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 
-import ImageWithLoader from "elements/shared/ImageWithLoader";
-
 import {
   Card,
+  ToppingImage,
   CTAContainer,
   Title,
   Price,
@@ -15,7 +14,7 @@ function ToppingCard({ isSelected, topping, disabled, ...rest }) {
   const { label, showLabel, itemImage } = topping;
   return (
     <Card isSelected={isSelected} disabled={disabled} {...rest}>
-      <ImageWithLoader src={itemImage} alt={label} width="64px" height="64px" />
+      <ToppingImage src={itemImage} alt={label} />
       <CTAContainer>
         <Title>{label}</Title>
         <Price>{showLabel}</Price>

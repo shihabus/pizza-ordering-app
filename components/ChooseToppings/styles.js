@@ -4,6 +4,7 @@ import { PreTitle } from "elements/shared/TextStyles";
 import Slider from "elements/ChooseToppings/Slider";
 import Checkbox from "elements/shared/Checkbox";
 import Colors from "elements/shared/Colors";
+import ImageWithLoader from "elements/shared/ImageWithLoader";
 
 const SliderTitle = styled.p`
   font-family: Roboto;
@@ -49,6 +50,12 @@ const Card = styled.div`
   & > :first-child {
     margin-right: 12px;
   }
+`;
+
+const ToppingImage = styled(ImageWithLoader)`
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
 `;
 
 const CTAContainer = styled.div`
@@ -103,6 +110,7 @@ export {
   SubTitle,
   StyledSlider,
   Card,
+  ToppingImage,
   CTAContainer,
   Title,
   Price,
